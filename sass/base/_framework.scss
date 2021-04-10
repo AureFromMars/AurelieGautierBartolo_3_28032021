@@ -1,0 +1,21 @@
+/*FLEX*/
+
+.flex
+{
+    display: flex;
+}
+
+.wrap
+{
+    flex: wrap;
+}
+
+.row
+{
+    flex-direction: row;
+}
+
+.column
+{
+    flex-direction: column;
+}

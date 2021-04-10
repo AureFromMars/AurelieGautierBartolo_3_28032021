@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* Organisation de la méthodologie 7.1
+
+YES *********** 1. utils/ (abstract) : variables, fonctions, mixins et %plaholders pour les extensions éventuelles
+NO ************ 2. vendors/ : feuilles de style externes comme Bootsrtrap
+YES *********** 3. base/ : fondations du site, normes applicables partout : police...
+YES *********** 4. components/ : blocs de BEM les plus indépendants, comme les boutons
+YES *********** 5. layouts/ : blocs de BEM réutilisables comme header des grandes mises en page ou footer (peuvent utiliser des composants pour générer le contenu)
+YES *********** 6. pages / : codes applicables qu'à des pages spécifiques, non réutilisées ailleurs
+NO ************ 7. themes/ : codes thématiques, styles de noël par exemple
+main.scss : contient les imports des autres feuilles de style
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+/*COLORS*/
+/*ALIGNMENTS*/
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body a:link, body a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__title {
+  font-family: "Shrikhand" !important;
+}
+
+/*FLEX*/
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex: wrap;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* LOADER TEXT 1 */
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
+.loader-text span {
+  display: inline-block;
+  margin: 0 0px;
+  color: #9356DC;
+  font-family: "Shrikhand";
+  font-size: xx-large;
+}
+.loader-text span:nth-child(1) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0s infinite linear alternate;
+}
+.loader-text span:nth-child(2) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.1666666667s infinite linear alternate;
+}
+.loader-text span:nth-child(3) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.3333333333s infinite linear alternate;
+}
+.loader-text span:nth-child(4) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.5s infinite linear alternate;
+}
+.loader-text span:nth-child(5) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.6666666667s infinite linear alternate;
+}
+.loader-text span:nth-child(6) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.8333333333s infinite linear alternate;
+}
+.loader-text span:nth-child(7) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 1s infinite linear alternate;
+}
+.loader-text span:nth-child(8) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 1.1666666667s infinite linear alternate;
+}
+
+@keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(3px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

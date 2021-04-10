@@ -1,0 +1,23 @@
+{
+  "name": "p3.localhost",
+  "version": "1.0.0",
+  "description": "OC P3 Dynamisez une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded"
+  },
+  "_commentaire": "commentaire compatible tous analyseurs : différents styles de compilation sass : nested expanded compact compressed",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AureFromMars/AurelieGautierBartolo_3_28032021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AureFromMars/AurelieGautierBartolo_3_28032021/issues"
+  },
+  "homepage": "https://github.com/AureFromMars/AurelieGautierBartolo_3_28032021#readme",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}
