@@ -14,20 +14,92 @@ main.scss : contient les imports des autres feuilles de style
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /*COLORS*/
 /*ALIGNMENTS*/
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+  margin: auto;
   scroll-behavior: smooth;
+}
+
+#bloc-page {
+  margin: auto;
+  min-width: 300px;
+}
+
+header, main {
+  margin: auto;
+}
+
+.shadow {
+  box-shadow: 0px 6px 10px #ececec;
+}
+
+header nav > div {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+header .form {
+  background-color: #f6f6f6;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+header .form-search {
+  background-color: #eaeaea;
+  width: 100%;
+}
+.howto-step__item {
+  display: inline-block;
+}
+.howto-step__item__number {
+  display: block;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
+}
+
+.footer {
+  background-color: #353535;
+  line-height: 30px;
+}
+.footer-list {
+  justify-content: space-between;
+}
+.footer-list .footer-list__item {
+  display: inline-block;
+}
+.footer-list .footer-list__item i {
+  font-size: 0.8em;
+  width: 10px;
+  /*height: 10px;*/
+  margin-right: 15px;
 }
 
 * {
   font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
 }
 
 body a:link, body a:visited {
   text-decoration: none;
   color: inherit;
+}
+body a:hover {
+  color: #9356DC;
+}
+body a:active {
+  color: #FF79DA;
 }
 
 p, h1, h2, h3, h4 {
@@ -40,8 +112,13 @@ ul {
   padding: 0;
 }
 
-.footer__title {
+footer {
+  color: #fff;
+}
+
+.footer-title {
   font-family: "Shrikhand" !important;
+  font-size: 1.1em;
 }
 
 /*FLEX*/
@@ -50,7 +127,11 @@ ul {
 }
 
 .wrap {
-  flex: wrap;
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
 }
 
 .row {
@@ -61,23 +142,25 @@ ul {
   flex-direction: column;
 }
 
-/* LOADER TEXT 1 */
+.light:hover {
+  opacity: 0.6;
+}
+
+/* LOADER */
 .loader {
   position: fixed;
-  height: 100%;
+  height: 0%;
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 9999;
-  animation: loader 0.01s;
-  animation-delay: 1.75s;
-  animation-fill-mode: both;
+  animation: loader-end 10s 0s linear;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-
-.loader-text {
+.loader .loader__text {
   position: absolute;
   top: 0;
   right: 0;
@@ -89,42 +172,42 @@ ul {
   height: 100px;
   line-height: 100px;
 }
-.loader-text span {
+.loader .loader__text span {
   display: inline-block;
   margin: 0 0px;
   color: #9356DC;
   font-family: "Shrikhand";
   font-size: xx-large;
 }
-.loader-text span:nth-child(1) {
+.loader .loader__text span:nth-child(1) {
   filter: blur(0px);
   animation: blur-text 1.5s 0s infinite linear alternate;
 }
-.loader-text span:nth-child(2) {
+.loader .loader__text span:nth-child(2) {
   filter: blur(0px);
   animation: blur-text 1.5s 0.1666666667s infinite linear alternate;
 }
-.loader-text span:nth-child(3) {
+.loader .loader__text span:nth-child(3) {
   filter: blur(0px);
   animation: blur-text 1.5s 0.3333333333s infinite linear alternate;
 }
-.loader-text span:nth-child(4) {
+.loader .loader__text span:nth-child(4) {
   filter: blur(0px);
   animation: blur-text 1.5s 0.5s infinite linear alternate;
 }
-.loader-text span:nth-child(5) {
+.loader .loader__text span:nth-child(5) {
   filter: blur(0px);
   animation: blur-text 1.5s 0.6666666667s infinite linear alternate;
 }
-.loader-text span:nth-child(6) {
+.loader .loader__text span:nth-child(6) {
   filter: blur(0px);
   animation: blur-text 1.5s 0.8333333333s infinite linear alternate;
 }
-.loader-text span:nth-child(7) {
+.loader .loader__text span:nth-child(7) {
   filter: blur(0px);
   animation: blur-text 1.5s 1s infinite linear alternate;
 }
-.loader-text span:nth-child(8) {
+.loader .loader__text span:nth-child(8) {
   filter: blur(0px);
   animation: blur-text 1.5s 1.1666666667s infinite linear alternate;
 }
@@ -135,6 +218,26 @@ ul {
   }
   100% {
     filter: blur(3px);
+  }
+}
+@keyframes loader-end {
+  0% {
+    opacity: 1;
+    height: 100%;
+  }
+  20% {
+    opacity: 1;
+    height: 100%;
+  }
+  29.9999% {
+    opacity: 0;
+    height: 100%;
+  }
+  30% {
+    height: 0px;
+  }
+  100% {
+    height: 0px;
   }
 }
 

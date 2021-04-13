@@ -1,59 +1,61 @@
-/* LOADER TEXT 1 */
+// https://codepen.io/42EG4M1/pen/bVMzze/
+// https://codepen.io/alphardex/pen/XWWWBmQ
+// https://codepen.io/AdamDipinto/pen/ewKxwE
 
-@mixin position-center($text-align: center)
-{
-	position: absolute;
-	top: 0;
-    right: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	text-align: $text-align;
-}
 
-.loader
-{
+/* LOADER */
+
+.loader {
     position: fixed;
-    height: 100%;
+    height: 0%;
     width: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.70);
+    background-color: rgba(255, 255, 255, 0.80);
     z-index: 9999;
-    animation: loader 0.01s;
-    animation-delay: 1.75s;
-    animation-fill-mode: both;
-    align-items:center;
-    justify-content:center;
-}
+	animation: loader-end 10s 0s linear;
+    align-items: center;
+    justify-content: center;
+	overflow: hidden;
 
-.loader-text
-{
-	@include position-center;
-	width: 100%;
-	height: 100px;
-	line-height: 100px;
+	.loader__text
+	{
+		@include position-center;
+		width: 100%;
+		height: 100px;
+		line-height: 100px;
 
-	span
-    {
-		display: inline-block;
-		margin: 0 0px;
-		color: $color-primary;
-        font-family: $headings;
-        font-size: xx-large;
-		
-        @for $i from 0 through 7
-        {
-			&:nth-child(#{$i + 1})
-            {
-				filter: blur(0px);
-				animation: blur-text 1.5s (#{$i/6})+s infinite linear alternate;
+		span
+		{
+			display: inline-block;
+			margin: 0 0px;
+			color: $color-primary;
+			font-family: $headings;
+			font-size: xx-large;
+			
+			@for $i from 0 through 7
+			{
+				&:nth-child(#{$i + 1})
+				{
+					filter: blur(0px);
+					animation: blur-text 1.5s (#{$i/6})+s infinite linear alternate;
+				}
 			}
 		}
 	}
+
 }
+
 
 @keyframes blur-text {
 	0% {filter: blur(0px);}
 	100% {filter: blur(3px);}
+}
+
+@keyframes loader-end {
+	0% {opacity:1;height: 100%;}
+	20% {opacity:1;height: 100%;}
+	29.9999% {opacity:0;height: 100%;}
+	30% {height: 0px;}
+	100% {height: 0px;}
 }

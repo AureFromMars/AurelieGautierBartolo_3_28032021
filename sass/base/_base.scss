@@ -1,6 +1,102 @@
-body
-{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
     scroll-behavior: smooth;
+}
+
+#bloc-page {
+    margin: auto;
+    min-width: 300px;
+}
+
+header, main {
+    margin: auto;
+}
+
+.shadow {
+    box-shadow: 0px 6px 10px #ececec;
+}
+
+header {
+
+    nav {
+        > div {
+            margin: 0;
+            padding: 0;
+            height: 50px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .form {
+        background-color: $light-grey;
+        justify-content: center;
+        align-items: center;
+        text-align : center;
+        width: 100%;
+        margin: auto;
+
+        &-search {
+            background-color: $medium-grey;
+            width: 100%;
+        }
+
+        &-text {
+
+        }
+
+        &-button {
+
+        }
+    }
+}
+
+
+.howto-step {
+
+    &__item {
+        display: inline-block;
+
+        &__number {
+            display: block;
+            width: 23px;
+            height: 23px;
+            line-height: 23px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $color-primary;
+            color: $white;
+        }
+    }
+
+}
+
+.footer {
+    background-color: $dark-grey;
+    line-height: 30px;
+
+    &-title {
+
+    }
+    &-list {
+
+        justify-content: space-between;
+        //flex: 2 0 160px; grow shrink basis
+
+        .footer-list__item {
+            display: inline-block;
+
+            i {
+                font-size: 0.8em;
+                width: 10px;
+                /*height: 10px;*/
+                margin-right: 15px;
+            }
+        }
+    }
 }

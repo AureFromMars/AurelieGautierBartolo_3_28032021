@@ -1,35 +1,43 @@
 $headings: 'Shrikhand';
 $texts: 'Roboto', sans-serif;
 
-*
-{
+* {
     font-family: $texts;
-    box-sizing: border-box;
 }
 
-body
-{
-    & a:link, a:visited
-    {
+body {
+    
+
+    & a:link, a:visited     {
         text-decoration: none;
         color: inherit;
     }
+
+    & a:hover {
+        color: $color-primary;
+    }
+
+    & a:active {
+        color: $color-secondary;
+    }
 }
 
-p, h1, h2, h3, h4
-{
+p, h1, h2, h3, h4 {
     margin: 0;
 }
 
-ul
-{
+ul {
     list-style-type : none;
     margin: 0;
     padding: 0;
 }
 
-.footer__title
-{
+footer {
+    color:$white;
+}
+
+.footer-title {
     font-family: $headings !important;
+    font-size: 1.1em;
 }
 

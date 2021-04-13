@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Bienvenue sur le site Internet d'ohmyfood !">
-        <link rel="stylesheet" href="public/css/style.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><!--ROBOTO-->
         <link rel="icon" href="ohmyfood_favicon.ico">
@@ -13,45 +13,58 @@
     </head>
     <body>
         <div id="bloc-page">
-            <!-- HEADER -->
-            <div class="loader flex">
-                <div class="loader-text flex">
-                    <span class="loader-text__letter">o</span>
-                    <span class="loader-text__letter">h</span>
-                    <span class="loader-text__letter">m</span>
-                    <span class="loader-text__letter">y</span>
-                    <span class="loader-text__letter">f</span>
-                    <span class="loader-text__letter">o</span>
-                    <span class="loader-text__letter">o</span>
-                    <span class="loader-text__letter">d</span>
+            <!-- LOADER -->
+            <div class="loader">
+                <div class="loader__text">
+                    <span>o</span>
+                    <span>h</span>
+                    <span>m</span>
+                    <span>y</span>
+                    <span>f</span>
+                    <span>o</span>
+                    <span>o</span>
+                    <span>d</span>
                 </div>
             </div>
+            <!-- HEADER -->
             <header>
-                <nav>
-                    <a href="index.html"><img class="logo" src="public/img/ohmyfood_logo.svg" alt="Logo ohmyfood" title="Page d'accueil ohmyfood" /></a>
+                <nav class="logo shadow">
+                    <div class="flex">
+                        <a href="index.html"><img class="logo" src="img/ohmyfood_logo.svg" alt="Logo ohmyfood" title="Page d'accueil ohmyfood" /></a>
+                    </div>
                 </nav>
-                <form>
-                    <div>
+                <form class="form flex column">
+                    <div class="form-search">
                         <span class="fas fa-map-marker-alt"></span>
                         <input type="search" name="search-place" placeholder="Paris, Belleville">
                     </div>
-                    <div>
+                    <div class="form-text">
                         <h2>Réservez le menu qui vous convient</h2>
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                     </div>
+                     <div class="form-button">
                         <button><span class="submit_button">Explorez nos restaurants</span><i class="submit_button fas fa-search"></i></button>
                     </div>
+               
                 </form>
             </header>
             <!-- MAIN -->
             <main>
                 <section class="howto">
                     <h2>Fonctionnement</h2>
-                    <div class="steps">
-                        <ul>
-                            <li class="step step__choose">Choississez votre restaurant</li>
-                            <li class="step step__compose">Composez votre menu</li>
-                            <li class="step step__taste">Dégustez au restaurant</li>
-                        </ul>
+                    <div class="howto-step flex row">
+                        <div class="howto-step__item">
+                            <span class="howto-step__item__number">1</span>
+                            <span class="howto-step__item__text">Choisissez votre restaurant</span>
+                        </div>
+                        <div class="howto-step__item">
+                            <div class="howto-step__item__number">2</div>
+                            <div class="howto-step__item__text">Composez votre menu</div>
+                        </div>
+                        <div class="howto-step__item">
+                            <div class="howto-step__item__number">3</div>
+                            <div class="howto-step__item__text">Dégustez au restaurant</div>
+                        </div>
                     </div>
                 </section>
                 <article class="restaurants" href="#restaurants">
@@ -59,7 +72,7 @@
                     <div class="restaurants__menu">
                         <a href="restaurants/menilmontant_la-palette-du-gout.html" title="La palette du goût">
                             <div>
-                                <img src="images/menilmontant_la-palette-du-gout.jpg" alt="Image La palette du goût"/>
+                                <img src="img/menilmontant_la-palette-du-gout.jpg" alt="Image La palette du goût"/>
                                 <div class="new">Nouveau</div>
                             </div>
                             <div class="description">
@@ -75,7 +88,7 @@
                     <div class="restaurants__menu">
                         <a href="restaurants/charonne_la-note-enchantee.html" title="La note enchantée">
                             <div>
-                                <img src="images/charonne_la-note-enchantee.jpg" alt="Image La note enchantée"/>
+                                <img src="img/charonne_la-note-enchantee.jpg" alt="Image La note enchantée"/>
                                 <div class="new">Nouveau</div>
                             </div>
                             <div class="description">
@@ -90,7 +103,7 @@
                     <div class="restaurants__menu">
                         <a href="restaurants/cite-rouge_a-la-francaise.html" title="À la française">
                             <div>
-                                <img src="images/charonne_la-note-enchantee.jpg" alt="Image À la française"/>
+                                <img src="img/cite-rouge_a-la-francaise.jpg" alt="Image À la française"/>
                                 <div class="new">Nouveau</div>
                             </div>
                             <div class="description">
@@ -105,7 +118,7 @@
                     <div class="restaurants__menu">
                         <a href="restaurants/folie-mericourt_le-delice-des-sens.html" title="Le délice des sens">
                             <div>
-                                <img src="images/charonne_la-note-enchantee.jpg" alt="Image Le délice des sens"/>
+                                <img src="img/folie-mericourt_le-delice-des-sens.jpg" alt="Image Le délice des sens"/>
                                 <div class="new">Nouveau</div>
                             </div>
                             <div class="description">
@@ -120,13 +133,19 @@
                 </article>
             </main>
             <!-- FOOTER -->
-            <footer class="footer">
-                <div class="footer__title">ohmyfood</div>
-                <ul class ="footer__list">
-                <li class ="footer__list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-                <li class ="footer__list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-                <li class ="footer__list__item"><a href="" title="Consultez les mentions légales">Mentions légales</li>
-                <li class ="footer__list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</li>
+            <footer class="footer flex wrap column">
+                <div class="footer-title">ohmyfood</div>
+                <!-- <ul class ="footer-list flex wrap row">
+                    <li class ="footer-list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i><b>Proposer un restaurant</b></li>
+                    <li class ="footer-list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i><b>Devenir partenaire</b></li>
+                    <li class ="footer-list__item"><a href="" title="Consultez les mentions légales">Mentions légales</li>
+                    <li class ="footer-list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</li>
+                </ul> -->
+                <div class ="footer-list flex wrap row">
+                    <div class ="footer-list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i><b>Proposer un restaurant</b></div>
+                    <div class ="footer-list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i><b>Devenir partenaire</b></div>
+                    <div class ="footer-list__item"><a href="" title="Consultez les mentions légales">Mentions légales</div>
+                    <div class ="footer-list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</div>
                 </ul>
             </footer>
         </div>
