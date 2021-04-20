@@ -6,7 +6,8 @@
 /* LOADER */
 
 .loader {
-    position: fixed;
+    display: none;// A SUPPRIMER APRES TESTS****************************
+	position: fixed;
     height: 0%;
     width: 100%;
     left: 0;

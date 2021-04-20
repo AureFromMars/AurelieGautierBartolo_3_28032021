@@ -28,44 +28,38 @@
             </div>
             <!-- HEADER -->
             <header>
-                <nav class="logo shadow">
-                    <div class="flex">
-                        <a href="index.html"><img class="logo" src="img/ohmyfood_logo.svg" alt="Logo ohmyfood" title="Page d'accueil ohmyfood" /></a>
-                    </div>
+                <nav class="logo">
+                    <a href="index.html"><img class="logo" src="img/ohmyfood_logo.svg" alt="Logo ohmyfood" title="Page d'accueil ohmyfood" /></a>
                 </nav>
-                <form class="form flex column">
+                <form class="form">
                     <div class="form-search">
                         <span class="fas fa-map-marker-alt"></span>
                         <input type="search" name="search-place" placeholder="Paris, Belleville">
                     </div>
                     <div class="form-text">
-                        <h2>Réservez le menu qui vous convient</h2>
+                        <h1>Réservez le menu qui vous convient</h1>
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                      </div>
                      <div class="form-button">
-                        <button><span class="submit_button">Explorez nos restaurants</span><i class="submit_button fas fa-search"></i></button>
+                        <button>Explorez nos restaurants</button>
                     </div>
-               
                 </form>
             </header>
             <!-- MAIN -->
             <main>
                 <section class="howto">
                     <h2>Fonctionnement</h2>
-                    <div class="howto-step flex row">
-                        <div class="howto-step__item">
-                            <span class="howto-step__item__number">1</span>
-                            <span class="howto-step__item__text">Choisissez votre restaurant</span>
-                        </div>
-                        <div class="howto-step__item">
-                            <div class="howto-step__item__number">2</div>
-                            <div class="howto-step__item__text">Composez votre menu</div>
-                        </div>
-                        <div class="howto-step__item">
-                            <div class="howto-step__item__number">3</div>
-                            <div class="howto-step__item__text">Dégustez au restaurant</div>
-                        </div>
-                    </div>
+                    <ul class="howto-stepping">
+                        <li class="howto-stepping__item">
+                            <a class="howto-stepping__item__1">Choisissez votre restaurant</a>
+                        </li>
+                        <li class="howto-stepping__item">
+                            <a class="howto-stepping__item__2">Composez votre menu</a>
+                        </li>
+                        <li class="howto-stepping__item">
+                            <a class="howto-stepping__item__3">Dégustez au restaurant</a>
+                        </li>
+                    </ul>
                 </section>
                 <article class="restaurants" href="#restaurants">
                     <h2>Restaurants</h2>
@@ -133,20 +127,16 @@
                 </article>
             </main>
             <!-- FOOTER -->
-            <footer class="footer flex wrap column">
-                <div class="footer-title">ohmyfood</div>
-                <!-- <ul class ="footer-list flex wrap row">
-                    <li class ="footer-list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i><b>Proposer un restaurant</b></li>
-                    <li class ="footer-list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i><b>Devenir partenaire</b></li>
-                    <li class ="footer-list__item"><a href="" title="Consultez les mentions légales">Mentions légales</li>
-                    <li class ="footer-list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</li>
-                </ul> -->
-                <div class ="footer-list flex wrap row">
-                    <div class ="footer-list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i><b>Proposer un restaurant</b></div>
-                    <div class ="footer-list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i><b>Devenir partenaire</b></div>
-                    <div class ="footer-list__item"><a href="" title="Consultez les mentions légales">Mentions légales</div>
-                    <div class ="footer-list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</div>
-                </ul>
+            <footer class="footer">
+                <h2 class="footer-title">ohmyfood</h2>
+                <nav class="footer-nav">
+                    <ul class="footer-nav__list flex wrap row">
+                        <li class="footer-nav__list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i><b>Proposer un restaurant</b></a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i><b>Devenir partenaire</b></a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Consultez les mentions légales">Mentions légales</a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</a></li>
+                    </ul>
+                </nav>
             </footer>
         </div>
     </body>

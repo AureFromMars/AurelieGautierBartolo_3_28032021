@@ -8,3 +8,41 @@
 	margin: auto;
 	text-align: $text-align;
 }
+
+//@mixin règle CSS préconçue utilisable partout ailleurs
+
+@mixin flexbox($display: null, $wrap: null, $direction: null, $justify: null) {
+	@if $display != null {
+		display: $display;
+	}
+	
+	@if $wrap != null {
+		flex-wrap: $wrap;
+	}
+	
+	@if $direction != null {
+		flex-direction: $direction;
+	}
+	
+	@if $justify != null {
+		justify-content: $justify;
+	}
+}
+
+@mixin flexitem($grow: null, $shrink: null, $basis: null) {
+	@if $grow != null {
+		flex-grow: $grow;
+	}
+	
+	@if $shrink != null {
+		flex-shrink: $shrink;
+	}
+	
+	@if $basis != null {
+		flex-basis: $basis;
+	}
+}
+
+@mixin box-shadow($x, $y, $blur, $color){
+	box-shadow: $x $y $blur $color;
+}

@@ -6,9 +6,14 @@ $color-tertiary: #99E2D0;
 $white: #fff;
 $black: #000;
 $dark-grey: rgb(53, 53, 53);
+$high-grey: rgb(207, 207, 207);
 $medium-grey: rgb(234, 234, 234);
 $light-grey: rgb(246, 246, 246);
 
 /*ALIGNMENTS*/
 
 //$text-align-center: center;
+
+/* MEDIA QUERIES */
+
+$breakpoint-tablet: 600px;

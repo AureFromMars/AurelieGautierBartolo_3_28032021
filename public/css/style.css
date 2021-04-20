@@ -14,83 +14,124 @@ main.scss : contient les imports des autres feuilles de style
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /*COLORS*/
 /*ALIGNMENTS*/
+/* MEDIA QUERIES */
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: auto;
   scroll-behavior: smooth;
 }
 
 #bloc-page {
-  margin: auto;
   min-width: 300px;
 }
 
-header, main {
+body, header, main, #bloc-page {
   margin: auto;
 }
 
-.shadow {
-  box-shadow: 0px 6px 10px #ececec;
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-header nav > div {
-  margin: 0;
-  padding: 0;
-  height: 50px;
+header nav {
+  box-shadow: 0px 2px 4px #cfcfcf;
+  display: flex;
+  z-index: 2;
   width: 100%;
-  justify-content: center;
+  height: 63px;
+  padding-top: 10px;
+}
+header nav > a {
+  display: flex;
+  width: 100%;
   align-items: center;
 }
+header nav > a > img {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  display: block;
+  height: 53%;
+}
 header .form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #f6f6f6;
-  justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
-  margin: auto;
 }
 header .form-search {
   background-color: #eaeaea;
   width: 100%;
+  padding: 15px 0;
 }
-.howto-step__item {
-  display: inline-block;
+header .form-search > * {
+  color: #353535;
 }
-.howto-step__item__number {
-  display: block;
-  width: 23px;
-  height: 23px;
-  line-height: 23px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #9356DC;
-  color: #fff;
+header .form-search > input {
+  border: none;
+  background: none;
+  margin-left: 10px;
+}
+header .form-search > input::placeholder {
+  opacity: 1;
+}
+header .form-text {
+  margin: 30px;
+}
+header .form-button {
+  margin-bottom: 50px;
+}
+
+.howto-stepping {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.howto-stepping__item {
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .footer {
   background-color: #353535;
   line-height: 30px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-.footer-list {
+.footer-nav {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+.footer-nav__list {
   justify-content: space-between;
 }
-.footer-list .footer-list__item {
+.footer-nav__list__item {
   display: inline-block;
 }
-.footer-list .footer-list__item i {
+.footer-nav__list__item i {
   font-size: 0.8em;
   width: 10px;
   /*height: 10px;*/
   margin-right: 15px;
 }
 
-* {
+body {
   font-family: "Roboto", sans-serif;
 }
-
 body a:link, body a:visited {
   text-decoration: none;
   color: inherit;
@@ -102,20 +143,18 @@ body a:active {
   color: #FF79DA;
 }
 
-p, h1, h2, h3, h4 {
-  margin: 0;
-}
-
-ul {
-  list-style-type: none;
+p, h1, h2, h3, h4, ul {
   margin: 0;
   padding: 0;
 }
 
-footer {
-  color: #fff;
+ul {
+  list-style: none;
 }
 
+.footer {
+  color: #fff;
+}
 .footer-title {
   font-family: "Shrikhand" !important;
   font-size: 1.1em;
@@ -146,8 +185,63 @@ footer {
   opacity: 0.6;
 }
 
+.form-button > button {
+  box-shadow: 0 10px 10px #eaeaea;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 100px;
+  height: 50px;
+  padding: 5px 25px;
+  color: #fff;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+}
+
+.howto-stepping__item {
+  width: 200px;
+  margin: 10px;
+  box-shadow: 0 10px 10px #eaeaea;
+  display: inline-block;
+  border: none;
+  border-radius: 100px;
+  background-color: #f6f6f6;
+  margin: 0 20px 20px 3px;
+}
+.howto-stepping__item__1, .howto-stepping__item__2, .howto-stepping__item__3 {
+  /*@include box-shadow(0, 10px, 10px, $medium-grey);
+  display: inline-block;
+  //height: 50px;
+  //width: 100%;
+  border: none;
+  border-radius: 100px;
+  background-color: $light-grey;
+  margin: 0 20px 20px 3px;*/
+}
+.howto-stepping__item__1::before, .howto-stepping__item__2::before, .howto-stepping__item__3::before {
+  display: inline-block;
+  left: -20px;
+  z-index: 2;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
+}
+.howto-stepping__item__1::before {
+  content: "1";
+}
+.howto-stepping__item__2::before {
+  content: "2";
+}
+.howto-stepping__item__3::before {
+  content: "3";
+}
+
 /* LOADER */
 .loader {
+  display: none;
   position: fixed;
   height: 0%;
   width: 100%;

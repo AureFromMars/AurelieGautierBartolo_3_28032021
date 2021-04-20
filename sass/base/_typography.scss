@@ -1,13 +1,9 @@
 $headings: 'Shrikhand';
 $texts: 'Roboto', sans-serif;
 
-* {
-    font-family: $texts;
-}
-
 body {
+    font-family: $texts;
     
-
     & a:link, a:visited     {
         text-decoration: none;
         color: inherit;
@@ -22,22 +18,22 @@ body {
     }
 }
 
-p, h1, h2, h3, h4 {
-    margin: 0;
-}
-
-ul {
-    list-style-type : none;
+p, h1, h2, h3, h4, ul {
     margin: 0;
     padding: 0;
 }
 
-footer {
-    color:$white;
+ul {
+    list-style: none;
 }
 
-.footer-title {
+
+.footer {
+    color:$white;
+
+    &-title {
     font-family: $headings !important;
     font-size: 1.1em;
+    }
 }
 
