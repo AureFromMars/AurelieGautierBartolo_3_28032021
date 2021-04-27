@@ -21,16 +21,16 @@ main.scss : contient les imports des autres feuilles de style
 
 @import "./base/base";
 @import "./base/typography";
-@import "./base/framework";
 
 @import "./components/buttons";
 @import "./components/loader";
 @import "./components/cards";
+@import "./components/howto";
 
-@import "./layouts/container";
-@import "./layouts/form";
-@import "./layouts/header";
 @import "./layouts/nav";
+@import "./layouts/form";
+@import "./layouts/footer";
+
 
 @import "./pages/home";
 @import "./pages/menu";

@@ -28,12 +28,12 @@
             </div>
             <!-- HEADER -->
             <header>
-                <nav class="logo">
+                <nav class="logo"><!-- POSITION FIXED -->
                     <a href="index.html"><img class="logo" src="img/ohmyfood_logo.svg" alt="Logo ohmyfood" title="Page d'accueil ohmyfood" /></a>
                 </nav>
                 <form class="form">
                     <div class="form-search">
-                        <span class="fas fa-map-marker-alt"></span>
+                        <i class="fas fa-map-marker-alt"></i>
                         <input type="search" name="search-place" placeholder="Paris, Belleville">
                     </div>
                     <div class="form-text">
@@ -50,80 +50,62 @@
                 <section class="howto">
                     <h2>Fonctionnement</h2>
                     <ul class="howto-stepping">
-                        <li class="howto-stepping__item">
-                            <a class="howto-stepping__item__1">Choisissez votre restaurant</a>
+                        <li class="howto-stepping__item howto-stepping__item--hover howto-stepping__item__1">
+                            <span class="howto-stepping__item__icon"><i class="fas fa-mobile-alt"></i></span>
+                            Choisissez votre restaurant
                         </li>
-                        <li class="howto-stepping__item">
-                            <a class="howto-stepping__item__2">Composez votre menu</a>
+                        <li class="howto-stepping__item howto-stepping__item--hover howto-stepping__item__2">
+                            <span class="howto-stepping__item__icon"><i class="fas fa-list-ul"></i></span>
+                            Composez votre menu
                         </li>
-                        <li class="howto-stepping__item">
-                            <a class="howto-stepping__item__3">Dégustez au restaurant</a>
+                        <li class="howto-stepping__item howto-stepping__item--hover howto-stepping__item__3">
+                            <span class="howto-stepping__item__icon"><i class="fas fa-store"></i></span>
+                            Dégustez au restaurant
                         </li>
                     </ul>
                 </section>
                 <article class="restaurants" href="#restaurants">
                     <h2>Restaurants</h2>
-                    <div class="restaurants__menu">
-                        <a href="restaurants/menilmontant_la-palette-du-gout.html" title="La palette du goût">
-                            <div>
+                    <ul class="restaurants__results">
+                        <li class="restaurants__results__card">
+                            <a href="restaurants/menilmontant_la-palette-du-gout.html" title="La palette du goût">
+                                <span class="new">Nouveau</span>
                                 <img src="img/menilmontant_la-palette-du-gout.jpg" alt="Image La palette du goût"/>
-                                <div class="new">Nouveau</div>
-                            </div>
-                            <div class="description">
-                                <div class="description__text"><h3>La palette du goût</h3><p>Ménilmontant</p></div>
-                                <!--<div class="description__btn-heart">
-                                    <i class="description__btn-heart--empty fas fa-heart"></i>
-                                    <i class="description__btn-heart--full fas fa-heart"></i>
-                                </div>-->
-                                <i class="description__btn-heart description__btn-heart--full fas fa-heart"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="restaurants__menu">
-                        <a href="restaurants/charonne_la-note-enchantee.html" title="La note enchantée">
-                            <div>
+                                <span class="description">
+                                    <span><h3 class="description__text">La palette du goût</h3><p>Ménilmontant</p></span>
+                                    <i class="description__btn-heart description__btn-heart--full far fa-heart"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="restaurants__results__card">
+                            <a href="restaurants/charonne_la-note-enchantee.html" title="La note enchantée">
+                                <span class="new">Nouveau</span>
                                 <img src="img/charonne_la-note-enchantee.jpg" alt="Image La note enchantée"/>
-                                <div class="new">Nouveau</div>
-                            </div>
-                            <div class="description">
-                                <div class="description__text"><h3>La note enchantée</h3><p>Charonne</p></div>
-                                <div class="description__btn-heart">
-                                    <i class="description__btn-heart--empty fas fa-heart"></i>
-                                    <i class="description__btn-heart--full fas fa-heart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="restaurants__menu">
-                        <a href="restaurants/cite-rouge_a-la-francaise.html" title="À la française">
-                            <div>
+                                <span class="description">
+                                    <span><h3 class="description__text">La note enchantée</h3><p>Charonne</p></span>
+                                    <i class="description__btn-heart description__btn-heart--full fas fa-heart"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="restaurants__results__card">
+                            <a href="restaurants/cite-rouge_a-la-francaise.html" title="À la française">
                                 <img src="img/cite-rouge_a-la-francaise.jpg" alt="Image À la française"/>
-                                <div class="new">Nouveau</div>
-                            </div>
-                            <div class="description">
-                                <div class="description__text"><h3>À la française</h3><p>Cité Rouge</p></div>
-                                <div class="description__btn-heart">
-                                    <i class="description__btn-heart--empty fas fa-heart"></i>
-                                    <i class="description__btn-heart--full fas fa-heart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="restaurants__menu">
-                        <a href="restaurants/folie-mericourt_le-delice-des-sens.html" title="Le délice des sens">
-                            <div>
+                                <span class="description">
+                                    <span><h3 class="description__text">À la française</h3><p>Cité Rouge</p></span>
+                                    <i class="description__btn-heart description__btn-heart--full fas fa-heart"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="restaurants__results__card">
+                            <a href="restaurants/folie-mericourt_le-delice-des-sens.html" title="Le délice des sens">
                                 <img src="img/folie-mericourt_le-delice-des-sens.jpg" alt="Image Le délice des sens"/>
-                                <div class="new">Nouveau</div>
-                            </div>
-                            <div class="description">
-                                <div class="description__text"><h3>Le délice des sens</h3><p>Folie-Méricourt</p></div>
-                                <div class="description__btn-heart">
-                                    <i class="description__btn-heart--empty fas fa-heart"></i>
-                                    <i class="description__btn-heart--full fas fa-heart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                                <span class="description">
+                                    <span><h3 class="description__text">Le délice des sens</h3><p>Folie-Méricourt</p></span>
+                                    <i class="description__btn-heart description__btn-heart--full fas fa-heart"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
                 </article>
             </main>
             <!-- FOOTER -->
