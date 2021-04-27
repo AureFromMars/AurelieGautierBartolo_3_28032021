@@ -1,0 +1,39 @@
+$headings: 'Shrikhand';
+$texts: 'Roboto', sans-serif;
+
+body {
+    font-family: $texts;
+    
+    & a:link, a:visited     {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    & a:hover {
+        color: $color-primary;
+    }
+
+    & a:active {
+        color: $color-secondary;
+    }
+}
+
+p, h1, h2, h3, h4, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.footer {
+    color:$white;
+
+    &-title {
+    font-family: $headings !important;
+    font-size: 1.1em;
+    }
+}
+

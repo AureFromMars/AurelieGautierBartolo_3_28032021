@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* Organisation de la méthodologie 7.1
+
+YES *********** 1. utils/ (abstract) : variables, fonctions, mixins et %plaholders pour les extensions éventuelles
+NO ************ 2. vendors/ : feuilles de style externes comme Bootsrtrap
+YES *********** 3. base/ : fondations du site, normes applicables partout : police...
+YES *********** 4. components/ : blocs de BEM les plus indépendants, comme les boutons
+YES *********** 5. layouts/ : blocs de BEM réutilisables comme header des grandes mises en page ou footer (peuvent utiliser des composants pour générer le contenu)
+YES *********** 6. pages / : codes applicables qu'à des pages spécifiques, non réutilisées ailleurs
+NO ************ 7. themes/ : codes thématiques, styles de noël par exemple
+main.scss : contient les imports des autres feuilles de style
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+/*COLORS*/
+/*ALIGNMENTS*/
+/* MEDIA QUERIES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+#bloc-page {
+  min-width: 300px;
+}
+
+body, header, main, #bloc-page {
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.howto-stepping {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.restaurants {
+  margin: auto;
+  background-color: #f6f6f6;
+  width: 100%;
+  padding: 20px;
+}
+.restaurants__results {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+}
+
+@media screen and (max-width: 1032px) {
+  .restaurants__results {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .restaurants__results {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+body a:link, body a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+body a:hover {
+  color: #9356DC;
+}
+body a:active {
+  color: #FF79DA;
+}
+
+p, h1, h2, h3, h4, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  color: #fff;
+}
+.footer-title {
+  font-family: "Shrikhand" !important;
+  font-size: 1.1em;
+}
+
+.light:hover {
+  opacity: 0.6;
+}
+
+.form-button > button {
+  box-shadow: 0 10px 10px #eaeaea;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 100px;
+  height: 50px;
+  padding: 5px 25px;
+  color: #fff;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+}
+.form-button > button:hover {
+  background: linear-gradient(to top left, #FF79DA, #9356DC);
+}
+
+/* LOADER */
+.loader {
+  display: none;
+  position: fixed;
+  height: 0%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  animation: loader-end 10s 0s linear;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.loader .loader__text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
+.loader .loader__text span {
+  display: inline-block;
+  margin: 0 0px;
+  color: #9356DC;
+  font-family: "Shrikhand";
+  font-size: xx-large;
+}
+.loader .loader__text span:nth-child(1) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0s infinite linear alternate;
+}
+.loader .loader__text span:nth-child(2) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.1666666667s infinite linear alternate;
+}
+.loader .loader__text span:nth-child(3) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.3333333333s infinite linear alternate;
+}
+.loader .loader__text span:nth-child(4) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.5s infinite linear alternate;
+}
+.loader .loader__text span:nth-child(5) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.6666666667s infinite linear alternate;
+}
+.loader .loader__text span:nth-child(6) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 0.8333333333s infinite linear alternate;
+}
+.loader .loader__text span:nth-child(7) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 1s infinite linear alternate;
+}
+.loader .loader__text span:nth-child(8) {
+  filter: blur(0px);
+  animation: blur-text 1.5s 1.1666666667s infinite linear alternate;
+}
+
+@keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(3px);
+  }
+}
+@keyframes loader-end {
+  0% {
+    opacity: 1;
+    height: 100%;
+  }
+  20% {
+    opacity: 1;
+    height: 100%;
+  }
+  29.9999% {
+    opacity: 0;
+    height: 100%;
+  }
+  30% {
+    height: 0px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+.restaurants__results__card {
+  background-color: #fff;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 10px 10px #eaeaea;
+}
+.restaurants__results__card a {
+  position: relative;
+}
+.restaurants__results__card a:hover {
+  color: #000;
+}
+.restaurants__results__card a .new {
+  position: absolute;
+  right: 0px;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: auto;
+  padding: 5px 10px;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+}
+.restaurants__results__card a img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+.restaurants__results__card a .description {
+  padding: 10px;
+  display: block;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurants__results__card a .description__btn-heart:hover {
+  background-image: linear-gradient(to left, #9356DC, #FF79DA);
+  background-clip: text;
+  background-size: 100%;
+  /*background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+.howto-stepping__item {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-shadow: 0 10px 10px #eaeaea;
+  height: 75px;
+  max-width: 400px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+  margin: 0 10px 20px 30px;
+  align-items: center;
+}
+.howto-stepping__item::before {
+  transform: translate(-15px);
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
+}
+.howto-stepping__item__1::before {
+  content: "1";
+}
+.howto-stepping__item__2::before {
+  content: "2";
+}
+.howto-stepping__item__3::before {
+  content: "3";
+}
+.howto-stepping__item__icon {
+  width: 20px;
+  margin: 20px;
+}
+.howto-stepping__item--hover:hover {
+  background-color: #f5edff;
+}
+.howto-stepping__item--hover:hover i {
+  color: #9356DC;
+}
+
+header nav {
+  box-shadow: 0px 2px 4px #cfcfcf;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 63px;
+  padding-top: 10px;
+  background-color: #fff;
+}
+header nav > a {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+header nav > a > img {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  display: block;
+  height: 53%;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: static;
+  margin-top: 63px;
+}
+.form-search {
+  background-color: #eaeaea;
+  width: 100%;
+  padding: 15px 0;
+}
+.form-search > * {
+  color: #353535;
+}
+.form-search > input {
+  border: none;
+  background: none;
+  margin-left: 10px;
+}
+.form-search > input::placeholder {
+  opacity: 1;
+}
+.form-text {
+  margin: 30px;
+}
+.form-button {
+  margin-bottom: 50px;
+}
+
+.footer {
+  background-color: #353535;
+  line-height: 30px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer .footer-title {
+  margin-right: 10px;
+}
+.footer-nav {
+  margin: auto;
+  width: 100%;
+}
+.footer-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer-nav__list__item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin-right: 20px;
+  min-width: 200px;
+}
+.footer-nav__list__item i {
+  font-size: 0.8em;
+  width: 10px;
+  margin-right: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

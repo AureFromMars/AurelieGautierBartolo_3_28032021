@@ -1,0 +1,50 @@
+.howto {
+    &-stepping {
+        &__item {
+            @include flexbox(flex, nowrap, row);
+            @include flexitem(1, 1);
+            @include box-shadow(0, 10px, 10px, $medium-grey);
+            height: 75px;
+            max-width: 400px;
+            border: none;
+            border-radius: 15px;
+            background-color: $light-grey;
+            margin: 0 10px 20px 30px;
+            align-items: center;
+
+            &::before {
+                transform: translate(-15px);
+                width: 23px;
+                height: 23px;
+                line-height: 23px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: $color-primary;
+                color: $white;
+            }
+            
+            &__1 {
+                &::before { content: "1"; }
+            }
+            &__2 {
+                &::before { content: "2"; }
+            }
+            &__3 {
+                &::before { content: "3"; }
+            }
+
+            &__icon {
+                width: 20px;
+                margin:20px;
+            }
+
+            &--hover:hover {
+                background-color: $color-primary-light;
+
+                i {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

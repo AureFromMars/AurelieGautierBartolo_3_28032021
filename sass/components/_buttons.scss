@@ -1,0 +1,19 @@
+.light:hover {
+    opacity: 0.6;
+}
+
+.form-button>button {
+    @include box-shadow(0, 10px, 10px, $medium-grey);
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 100px;
+    height: 50px;
+    padding: 5px 25px;
+    color: $white;
+    background: linear-gradient(to top left, $color-primary, $color-secondary);
+
+    &:hover {
+        background: linear-gradient(to top left, $color-secondary, $color-primary);
+    }
+}
