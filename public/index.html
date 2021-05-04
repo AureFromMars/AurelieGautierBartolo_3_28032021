@@ -6,8 +6,8 @@
         <meta name="description" content="Bienvenue sur le site Internet d'ohmyfood !">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><!--ROBOTO-->
-        <link rel="icon" href="ohmyfood_favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"><!--ROBOTO-->
+        <link rel="icon" href="favicon.ico">
         <script src="https://kit.fontawesome.com/05ffc8aabd.js" crossorigin="anonymous"></script>
         <title>ohmyfood</title>
     </head>
@@ -41,7 +41,7 @@
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                      </div>
                      <div class="form-button">
-                        <button>Explorez nos restaurants</button>
+                        <a href="#restaurants-anchor" title="Explorez nos restaurants"><button>Explorez nos restaurants</a></button>
                     </div>
                 </form>
             </header>
@@ -50,21 +50,21 @@
                 <section class="howto">
                     <h2>Fonctionnement</h2>
                     <ul class="howto-stepping">
-                        <li class="howto-stepping__item howto-stepping__item--hover howto-stepping__item__1">
-                            <span class="howto-stepping__item__icon"><i class="fas fa-mobile-alt"></i></span>
-                            Choisissez votre restaurant
+                        <li class="howto-stepping__item howto-stepping__item__1">
+                            <span class="howto-stepping__item__icon"><i class="fas fa-mobile-alt fa-2x"></i></span>
+                            <p>Choisissez votre restaurant</p>
                         </li>
-                        <li class="howto-stepping__item howto-stepping__item--hover howto-stepping__item__2">
+                        <li class="howto-stepping__item howto-stepping__item__2">
                             <span class="howto-stepping__item__icon"><i class="fas fa-list-ul"></i></span>
-                            Composez votre menu
+                            <p>Composez votre menu</p>
                         </li>
-                        <li class="howto-stepping__item howto-stepping__item--hover howto-stepping__item__3">
+                        <li class="howto-stepping__item howto-stepping__item__3">
                             <span class="howto-stepping__item__icon"><i class="fas fa-store"></i></span>
-                            Dégustez au restaurant
+                            <p>Dégustez au restaurant</p>
                         </li>
                     </ul>
                 </section>
-                <article class="restaurants" href="#restaurants">
+                <article id="restaurants-anchor" class="restaurants" href="#restaurants">
                     <h2>Restaurants</h2>
                     <ul class="restaurants__results">
                         <li class="restaurants__results__card">
@@ -73,7 +73,7 @@
                                 <img src="img/menilmontant_la-palette-du-gout.jpg" alt="Image La palette du goût"/>
                                 <span class="description">
                                     <span><h3 class="description__text">La palette du goût</h3><p>Ménilmontant</p></span>
-                                    <i class="description__btn-heart description__btn-heart--full far fa-heart"></i>
+                                    <i class="description__btn-heart fas fa-heart"></i>
                                 </span>
                             </a>
                         </li>
@@ -83,7 +83,7 @@
                                 <img src="img/charonne_la-note-enchantee.jpg" alt="Image La note enchantée"/>
                                 <span class="description">
                                     <span><h3 class="description__text">La note enchantée</h3><p>Charonne</p></span>
-                                    <i class="description__btn-heart description__btn-heart--full fas fa-heart"></i>
+                                    <i class="description__btn-heart fas fa-heart"></i>
                                 </span>
                             </a>
                         </li>
@@ -92,7 +92,7 @@
                                 <img src="img/cite-rouge_a-la-francaise.jpg" alt="Image À la française"/>
                                 <span class="description">
                                     <span><h3 class="description__text">À la française</h3><p>Cité Rouge</p></span>
-                                    <i class="description__btn-heart description__btn-heart--full fas fa-heart"></i>
+                                    <i class="description__btn-heart fas fa-heart"></i>
                                 </span>
                             </a>
                         </li>
@@ -101,7 +101,7 @@
                                 <img src="img/folie-mericourt_le-delice-des-sens.jpg" alt="Image Le délice des sens"/>
                                 <span class="description">
                                     <span><h3 class="description__text">Le délice des sens</h3><p>Folie-Méricourt</p></span>
-                                    <i class="description__btn-heart description__btn-heart--full fas fa-heart"></i>
+                                    <i class="description__btn-heart fas fa-heart"></i>
                                 </span>
                             </a>
                         </li>

@@ -6,6 +6,7 @@
     width: 100%;
     position: static;
     margin-top: 63px;
+    padding-bottom: 57px;
 
     &-search {
         background-color: $medium-grey;
@@ -23,15 +24,21 @@
 
             &::placeholder {
                 opacity: 1;
+                font-size: 1.3em;
             }
         }
     }
 
     &-text {
-        margin: 30px;
-    }
+        letter-spacing: -0.4px;
 
-    &-button {
-        margin-bottom: 50px;
+        h1 {
+            line-height: 27px;
+            margin: 40px 50px 13px 50px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
     }
 }

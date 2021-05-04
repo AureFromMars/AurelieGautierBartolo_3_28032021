@@ -2,18 +2,57 @@
     opacity: 0.6;
 }
 
-.form-button>button {
-    @include box-shadow(0, 10px, 10px, $medium-grey);
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 100px;
-    height: 50px;
-    padding: 5px 25px;
-    color: $white;
-    background: linear-gradient(to top left, $color-primary, $color-secondary);
+.form-button {
 
-    &:hover {
-        background: linear-gradient(to top left, $color-secondary, $color-primary);
+    a:hover {
+        color: white;
+    }
+
+    >button {
+        box-shadow: 0, 10px, 10px, $medium-grey;
+        display: block;
+        width: 220px;
+        border: none;
+        border-radius: 100px;
+        height: 50px;
+        color: white;
+        cursor: pointer;
+        font-size: 1.01em;
+        font-weight: 500;
+        background: linear-gradient(to top left, $color-primary, $color-secondary);
+
+        &:hover {
+            background: linear-gradient(to top left, $color-secondary, $color-primary);
+        }
+    }
+}
+
+.restaurants__results {
+    &__card {
+        a {
+            .description {
+                &__btn-heart {
+                    color: transparent;
+                    font-size: 1.5em;
+                    background-size: 100%;
+                    background-repeat: repeat;
+                    transition: transform 400ms, background-image 400ms 150ms;
+                    -webkit-text-stroke: 1px;
+                    -webkit-background-clip: text;
+                    -webkit-text-stroke-color: black;
+                    -moz-background-clip: text;
+                    
+                    &:hover {
+                        background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
+                        font-size: 1.1em;
+                        -webkit-text-stroke: 0px;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent; 
+                        -moz-background-clip: text;
+                        -moz-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
     }
 }

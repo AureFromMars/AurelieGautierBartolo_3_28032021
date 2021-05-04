@@ -23,13 +23,24 @@ p, h1, h2, h3, h4, ul {
     padding: 0;
 }
 
+p {
+    font-size: 1.15em;
+}
+
+h1 {
+    font-size: 1.57em;
+}
+
+h2 {
+    letter-spacing: -0.5px;
+}
+
 ul {
     list-style: none;
 }
 
-
 .footer {
-    color:$white;
+    color:white;
 
     &-title {
     font-family: $headings !important;

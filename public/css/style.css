@@ -13,8 +13,7 @@ main.scss : contient les imports des autres feuilles de style
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /*COLORS*/
-/*ALIGNMENTS*/
-/* MEDIA QUERIES */
+/* MEDIA QUERIES BREAKPOINTS */
 * {
   box-sizing: border-box;
 }
@@ -38,38 +37,6 @@ header {
   justify-content: space-between;
 }
 
-.howto-stepping {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.restaurants {
-  margin: auto;
-  background-color: #f6f6f6;
-  width: 100%;
-  padding: 20px;
-}
-.restaurants__results {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: auto;
-}
-
-@media screen and (max-width: 1032px) {
-  .restaurants__results {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
-  }
-}
-@media screen and (max-width: 600px) {
-  .restaurants__results {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-  }
-}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -89,12 +56,24 @@ p, h1, h2, h3, h4, ul {
   padding: 0;
 }
 
+p {
+  font-size: 1.15em;
+}
+
+h1 {
+  font-size: 1.57em;
+}
+
+h2 {
+  letter-spacing: -0.5px;
+}
+
 ul {
   list-style: none;
 }
 
 .footer {
-  color: #fff;
+  color: white;
 }
 .footer-title {
   font-family: "Shrikhand" !important;
@@ -105,19 +84,45 @@ ul {
   opacity: 0.6;
 }
 
+.form-button a:hover {
+  color: white;
+}
 .form-button > button {
-  box-shadow: 0 10px 10px #eaeaea;
+  box-shadow: 0, 10px, 10px, #eaeaea;
   display: block;
-  width: 100%;
+  width: 220px;
   border: none;
   border-radius: 100px;
   height: 50px;
-  padding: 5px 25px;
-  color: #fff;
+  color: white;
+  cursor: pointer;
+  font-size: 1.01em;
+  font-weight: 500;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
 }
 .form-button > button:hover {
   background: linear-gradient(to top left, #FF79DA, #9356DC);
+}
+
+.restaurants__results__card a .description__btn-heart {
+  color: transparent;
+  font-size: 1.5em;
+  background-size: 100%;
+  background-repeat: repeat;
+  transition: transform 400ms, background-image 400ms 150ms;
+  -webkit-text-stroke: 1px;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: black;
+  -moz-background-clip: text;
+}
+.restaurants__results__card a .description__btn-heart:hover {
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  font-size: 1.1em;
+  -webkit-text-stroke: 0px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 /* LOADER */
@@ -216,18 +221,17 @@ ul {
   }
 }
 .restaurants__results__card {
-  background-color: #fff;
-  height: 200px;
+  background-color: white;
+  height: auto;
   border-radius: 20px;
   overflow: hidden;
-  margin: 10px;
   box-shadow: 0 10px 10px #eaeaea;
 }
 .restaurants__results__card a {
   position: relative;
 }
 .restaurants__results__card a:hover {
-  color: #000;
+  color: black;
 }
 .restaurants__results__card a .new {
   position: absolute;
@@ -241,26 +245,24 @@ ul {
   border-radius: 2px;
 }
 .restaurants__results__card a img {
-  display: block;
   object-fit: cover;
   width: 100%;
   height: 150px;
 }
 .restaurants__results__card a .description {
-  padding: 10px;
-  display: block;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
+  padding: 10px 20px 10px 15px;
+  height: 80px;
 }
-.restaurants__results__card a .description__btn-heart:hover {
-  background-image: linear-gradient(to left, #9356DC, #FF79DA);
-  background-clip: text;
-  background-size: 100%;
-  /*background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
+.restaurants__results__card a .description__text {
+  height: auto;
+}
+
+.howto-stepping {
+  margin-top: 25px;
 }
 .howto-stepping__item {
   display: flex;
@@ -268,24 +270,30 @@ ul {
   flex-direction: row;
   flex-grow: 1;
   flex-shrink: 1;
-  box-shadow: 0 10px 10px #eaeaea;
+  box-shadow: 2px 5px 12px 0px #cfcfcf;
+  font-weight: 600;
+  font-size: 0.9em;
   height: 75px;
+  line-height: 20px;
   max-width: 400px;
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: #f6f6f6;
-  margin: 0 10px 20px 30px;
+  margin: 0 20px 22px 15px;
   align-items: center;
+  cursor: pointer;
 }
 .howto-stepping__item::before {
-  transform: translate(-15px);
-  width: 23px;
-  height: 23px;
-  line-height: 23px;
+  transform: translate(-12px);
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
   text-align: center;
   border-radius: 50%;
   background-color: #9356DC;
-  color: #fff;
+  color: white;
+  font-weight: normal;
+  font-size: 0.9em;
 }
 .howto-stepping__item__1::before {
   content: "1";
@@ -298,12 +306,21 @@ ul {
 }
 .howto-stepping__item__icon {
   width: 20px;
+  height: 30px;
+  line-height: 30px;
   margin: 20px;
+  color: #7e7e7e;
 }
-.howto-stepping__item--hover:hover {
+.howto-stepping__item__icon i {
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  padding: 0;
+}
+.howto-stepping__item:hover {
   background-color: #f5edff;
 }
-.howto-stepping__item--hover:hover i {
+.howto-stepping__item:hover i {
   color: #9356DC;
 }
 
@@ -315,7 +332,7 @@ header nav {
   width: 100%;
   height: 63px;
   padding-top: 10px;
-  background-color: #fff;
+  background-color: white;
 }
 header nav > a {
   display: flex;
@@ -341,6 +358,7 @@ header nav > a > img {
   width: 100%;
   position: static;
   margin-top: 63px;
+  padding-bottom: 57px;
 }
 .form-search {
   background-color: #eaeaea;
@@ -357,12 +375,17 @@ header nav > a > img {
 }
 .form-search > input::placeholder {
   opacity: 1;
+  font-size: 1.3em;
 }
 .form-text {
-  margin: 30px;
+  letter-spacing: -0.4px;
 }
-.form-button {
-  margin-bottom: 50px;
+.form-text h1 {
+  line-height: 27px;
+  margin: 40px 50px 13px 50px;
+}
+.form-text p {
+  margin-bottom: 30px;
 }
 
 .footer {
@@ -399,5 +422,64 @@ header nav > a > img {
   width: 10px;
   margin-right: 15px;
 }
+
+.howto {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin: 50px 0 45px 20px;
+}
+.howto-stepping {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.restaurants {
+  margin: auto;
+  background-color: #f6f6f6;
+  width: 100%;
+  padding: 50px 20px;
+}
+.restaurants__results {
+  margin: 30px 0 50px 0;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-gap: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .restaurants__results {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .restaurants__results {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+}
+
+/*@media screen and (max-width: $desktop)
+{
+    .restaurants {
+        &__results {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet)
+{
+    .restaurants {
+        &__results {
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */

@@ -9,8 +9,6 @@
 	text-align: $text-align;
 }
 
-//@mixin règle CSS préconçue utilisable partout ailleurs
-
 @mixin flexbox($display: null, $wrap: null, $direction: null, $justify: null) {
 	@if $display != null {
 		display: $display;
@@ -43,6 +41,20 @@
 	}
 }
 
-@mixin box-shadow($x, $y, $blur, $color){
-	box-shadow: $x $y $blur $color;
+@mixin desktop{
+	@media screen and (max-width: #{$desktop}) {
+		@content;
+	}
+}
+
+@mixin tablet{
+	@media screen and (max-width: #{$tablet}) {
+		@content;
+	}
+}
+
+@mixin phone{
+	@media screen and (max-width: #{$phone}) {
+		@content;
+	}
 }
