@@ -82,10 +82,6 @@ ul {
   font-size: 1.1em;
 }
 
-.light:hover {
-  opacity: 0.6;
-}
-
 .form-button a:hover {
   color: white;
 }
@@ -105,12 +101,17 @@ ul {
 }
 .form-button .button:hover {
   background-image: linear-gradient(to top left, #FF79DA, #9356DC);
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .restaurants__results #heart1, .restaurants__results #heart2, .restaurants__results #heart3, .restaurants__results #heart4 {
-  position: absolute;
-  left: -100vw;
+  display: none;
+}
+.restaurants__results #heart1:checked + label, .restaurants__results #heart2:checked + label, .restaurants__results #heart3:checked + label, .restaurants__results #heart4:checked + label {
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-text-stroke-color: transparent;
+  will-change: font-size;
+  animation: pulse 0.5s ease-in;
 }
 .restaurants__results label[for=heart1], .restaurants__results label[for=heart2], .restaurants__results label[for=heart3], .restaurants__results label[for=heart4] {
   cursor: pointer;
@@ -133,12 +134,6 @@ ul {
 .restaurants__results label[for=heart1]::selection, .restaurants__results label[for=heart2]::selection, .restaurants__results label[for=heart3]::selection, .restaurants__results label[for=heart4]::selection {
   color: none;
   background: transparent;
-}
-.restaurants__results #heart1:checked + label, .restaurants__results #heart2:checked + label, .restaurants__results #heart3:checked + label, .restaurants__results #heart4:checked + label {
-  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  -webkit-text-stroke-color: transparent;
-  will-change: font-size;
-  animation: pulse 0.5s ease-in;
 }
 
 @keyframes pulse {
@@ -253,7 +248,7 @@ ul {
   transition: transform 300ms;
 }
 .restaurants__results__card:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 .restaurants__results__card .new:after {
   content: "Nouveau";
@@ -291,54 +286,12 @@ ul {
   justify-content: space-between;
   padding: 10px 20px 20px 10px;
   flex: 0 0;
-  /*&__heart {
-      cursor: pointer;
-      position: relative;
-      right: 0;
-      top: 0;
-      margin: 10px 10px 0 0;
-      color: transparent;
-      font-size: 1.5em;
-      transition: transform 300ms, background-image 300ms 150ms;
-      -webkit-text-stroke: 1px;
-      -webkit-text-stroke-color: black;
-      -webkit-background-clip: text;
-
-      &:hover {
-          background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
-          animation: pulse 0.5s ease-in infinite;
-          -webkit-text-stroke-color: transparent;
-      }
-
-      &:active, &:focus, &:visited {
-          color: black;
-          // animation-play-state: paused;
-          animation: none;
-          //animation-fill-mode: forwards;
-      }
-
-      @keyframes pulse {
-          25% {transform: scale(0.9);}
-          75% {transform: scale(1.1);}
-      }
-  }*/
 }
 .restaurants__results__card__description__text {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
-  height: auto;
-}
-.restaurants__results__card .description {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 20px 20px 10px;
-  flex: 0 0;
-}
-.restaurants__results__card .description__text {
   height: auto;
 }
 
@@ -355,7 +308,6 @@ ul {
   font-size: 0.9em;
   height: 75px;
   line-height: 20px;
-  width: 320px;
   border: none;
   border-radius: 20px;
   background-color: #f6f6f6;

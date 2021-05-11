@@ -1,6 +1,6 @@
-.light:hover {
-    opacity: 0.6;
-}
+// .light:hover {
+//     opacity: 0.6;
+// }
 
 .form-button {
 
@@ -30,49 +30,16 @@
 }
 
 .restaurants__results {
-    &__card {
-        // &__btn-heart {
-        //     // .description {
-        //     //     &__btn-heart {
-        //             margin: 10px 10px 0 0;
-        //             color: transparent;
-        //             font-size: 1.5em;
-        //             transition: transform 300ms, background-image 300ms 150ms;
-        //             -webkit-text-stroke: 1px;
-        //             -webkit-text-stroke-color: black;
-        //             -webkit-background-clip: text;
-                    
-        //             &:hover {// arrivée en slide ou pop
-        //                 background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
-        //                 //animation: pulse 0.3s linear 1;
-        //                 animation: pulse 0.5s ease-in infinite;
-        //                 -webkit-text-stroke-color: transparent;
-        //                 //-webkit-text-fill-color: transparent; 
-        //                 //-moz-text-fill-color: transparent;// INSTALLER UN PREFIXEUR POUR SASS
-        //             }
-
-        //             &:active {// arrivée en slide ou pop
-        //                 background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
-        //                 -webkit-text-stroke-color: transparent;
-        //             }
-
-        //             @keyframes pulse {
-        //                 25% {transform: scale(0.9);}
-        //                 75% {transform: scale(1.1);}
-        //             }
-        //     //     }
-        //     // }
-        // }
-    }
-}
-
-
-.restaurants__results {
 
     #heart1, #heart2, #heart3, #heart4{
-        // display: none;
-        position: absolute;
-        left: -100vw;
+        display: none;
+
+        &:checked + label {
+            background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
+            -webkit-text-stroke-color: transparent;
+            will-change: font-size;
+            animation: pulse 0.5s ease-in;
+        }
     }
 
     label[for=heart1], label[for=heart2], label[for=heart3], label[for=heart4] {
@@ -97,17 +64,6 @@
         &::selection {
             color: none;
             background: transparent;
-        }
-    }
-
-    #heart1, #heart2, #heart3, #heart4{
-        
-
-        &:checked + label {
-            background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
-            -webkit-text-stroke-color: transparent;
-            will-change: font-size;
-            animation: pulse 0.5s ease-in;
         }
     }
 }
