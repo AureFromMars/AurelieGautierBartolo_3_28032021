@@ -12,8 +12,10 @@ main.scss : contient les imports des autres feuilles de style
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+/*VARIABLES UPPERCASE AND UNDERSCRORE AFIN DE BIEN REPERER LES CONSTANTES*/
 /*COLORS*/
 /* MEDIA QUERIES BREAKPOINTS */
+/* TRANSFORM */
 * {
   box-sizing: border-box;
 }
@@ -87,8 +89,8 @@ ul {
 .form-button a:hover {
   color: white;
 }
-.form-button > button {
-  box-shadow: 0, 10px, 10px, #eaeaea;
+.form-button .button {
+  box-shadow: 0 10px 10px #eaeaea;
   display: block;
   width: 220px;
   border: none;
@@ -98,33 +100,55 @@ ul {
   cursor: pointer;
   font-size: 1.01em;
   font-weight: 500;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+  transition: transform 300ms, background-image 1500ms 150ms;
 }
-.form-button > button:hover {
-  background: linear-gradient(to top left, #FF79DA, #9356DC);
+.form-button .button:hover {
+  background-image: linear-gradient(to top left, #FF79DA, #9356DC);
+  transform: scale(1.01);
 }
 
-.restaurants__results__card a .description__btn-heart {
+.restaurants__results #heart1, .restaurants__results #heart2, .restaurants__results #heart3, .restaurants__results #heart4 {
+  position: absolute;
+  left: -100vw;
+}
+.restaurants__results label[for=heart1], .restaurants__results label[for=heart2], .restaurants__results label[for=heart3], .restaurants__results label[for=heart4] {
+  cursor: pointer;
+  position: relative;
+  right: 0;
+  top: 0;
+  margin: 10px 10px 0 0;
   color: transparent;
   font-size: 1.5em;
-  background-size: 100%;
-  background-repeat: repeat;
-  transition: transform 400ms, background-image 400ms 150ms;
+  transition: transform 300ms, background-image 300ms 150ms;
   -webkit-text-stroke: 1px;
-  -webkit-background-clip: text;
   -webkit-text-stroke-color: black;
-  -moz-background-clip: text;
-}
-.restaurants__results__card a .description__btn-heart:hover {
-  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  font-size: 1.1em;
-  -webkit-text-stroke: 0px;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+}
+.restaurants__results label[for=heart1]:hover, .restaurants__results label[for=heart2]:hover, .restaurants__results label[for=heart3]:hover, .restaurants__results label[for=heart4]:hover {
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  animation: pulse 0.5s ease-in infinite;
+  -webkit-text-stroke-color: transparent;
+}
+.restaurants__results label[for=heart1]::selection, .restaurants__results label[for=heart2]::selection, .restaurants__results label[for=heart3]::selection, .restaurants__results label[for=heart4]::selection {
+  color: none;
+  background: transparent;
+}
+.restaurants__results #heart1:checked + label, .restaurants__results #heart2:checked + label, .restaurants__results #heart3:checked + label, .restaurants__results #heart4:checked + label {
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-text-stroke-color: transparent;
+  will-change: font-size;
+  animation: pulse 0.5s ease-in;
 }
 
+@keyframes pulse {
+  25% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
 /* LOADER */
 .loader {
   display: none;
@@ -222,20 +246,19 @@ ul {
 }
 .restaurants__results__card {
   background-color: white;
-  height: auto;
+  height: 250px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 10px #eaeaea;
+  transition: transform 300ms;
 }
-.restaurants__results__card a {
-  position: relative;
+.restaurants__results__card:hover {
+  transform: scale(1.01);
 }
-.restaurants__results__card a:hover {
-  color: black;
-}
-.restaurants__results__card a .new {
+.restaurants__results__card .new:after {
+  content: "Nouveau";
   position: absolute;
-  right: 0px;
+  right: 0;
   margin-top: 10px;
   margin-right: 10px;
   width: auto;
@@ -244,20 +267,78 @@ ul {
   color: #008766;
   border-radius: 2px;
 }
-.restaurants__results__card a img {
+.restaurants__results__card__image {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  position: relative;
+  height: 75%;
+}
+.restaurants__results__card__image:hover {
+  color: black;
+}
+.restaurants__results__card__image img {
   object-fit: cover;
   width: 100%;
-  height: 150px;
+  height: 0;
+  object-position: bottom;
+  flex: 1 0;
 }
-.restaurants__results__card a .description {
+.restaurants__results__card__description {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px 20px 10px 15px;
-  height: 80px;
+  padding: 10px 20px 20px 10px;
+  flex: 0 0;
+  /*&__heart {
+      cursor: pointer;
+      position: relative;
+      right: 0;
+      top: 0;
+      margin: 10px 10px 0 0;
+      color: transparent;
+      font-size: 1.5em;
+      transition: transform 300ms, background-image 300ms 150ms;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: black;
+      -webkit-background-clip: text;
+
+      &:hover {
+          background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
+          animation: pulse 0.5s ease-in infinite;
+          -webkit-text-stroke-color: transparent;
+      }
+
+      &:active, &:focus, &:visited {
+          color: black;
+          // animation-play-state: paused;
+          animation: none;
+          //animation-fill-mode: forwards;
+      }
+
+      @keyframes pulse {
+          25% {transform: scale(0.9);}
+          75% {transform: scale(1.1);}
+      }
+  }*/
 }
-.restaurants__results__card a .description__text {
+.restaurants__results__card__description__text {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+.restaurants__results__card .description {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px 20px 10px;
+  flex: 0 0;
+}
+.restaurants__results__card .description__text {
   height: auto;
 }
 
@@ -268,20 +349,20 @@ ul {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 0 0 320px;
   box-shadow: 2px 5px 12px 0px #cfcfcf;
   font-weight: 600;
   font-size: 0.9em;
   height: 75px;
   line-height: 20px;
-  max-width: 400px;
+  width: 320px;
   border: none;
   border-radius: 20px;
   background-color: #f6f6f6;
   margin: 0 20px 22px 15px;
   align-items: center;
   cursor: pointer;
+  padding-right: 20px;
 }
 .howto-stepping__item::before {
   transform: translate(-12px);
@@ -340,9 +421,7 @@ header nav > a {
   align-items: center;
 }
 header nav > a > img {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 100%;
+  flex: 1 1 100%;
   display: block;
   height: 53%;
 }
@@ -411,9 +490,7 @@ header nav > a > img {
   justify-content: space-evenly;
 }
 .footer-nav__list__item {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+  flex: 1 1 auto;
   margin-right: 20px;
   min-width: 200px;
 }
@@ -440,46 +517,14 @@ header nav > a > img {
   margin: auto;
   background-color: #f6f6f6;
   width: 100%;
-  padding: 50px 20px;
+  padding: 53px 20px;
 }
 .restaurants__results {
-  margin: 30px 0 50px 0;
+  margin: 25px 0 50px 0;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: auto;
   grid-gap: 15px;
 }
-@media screen and (max-width: 1024px) {
-  .restaurants__results {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
-  }
-}
-@media screen and (max-width: 600px) {
-  .restaurants__results {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-  }
-}
-
-/*@media screen and (max-width: $desktop)
-{
-    .restaurants {
-        &__results {
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto auto;
-        }
-    }
-}
-
-@media screen and (max-width: $tablet)
-{
-    .restaurants {
-        &__results {
-            grid-template-columns: auto;
-            grid-template-rows: auto;
-        }
-    }
-}*/
 
 /*# sourceMappingURL=style.css.map */

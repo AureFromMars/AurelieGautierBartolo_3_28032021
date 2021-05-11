@@ -11,47 +11,15 @@
 
 .restaurants {
     margin: auto;
-    background-color: $light-grey;
+    background-color: $LIGHT_GREY;
     width: 100%;
-    padding: 50px 20px;
+    padding: 53px 20px;
 
     &__results {
-        margin: 30px 0 50px 0;
+        margin: 25px 0 50px 0;
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-template-rows: auto;
         grid-gap: 15px;
-
-        @include desktop{
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto auto;
-        }
-
-        @include tablet{
-            grid-template-columns: auto;
-            grid-template-rows: auto;
-        }
     }
 }
-
-// MEDIA QUERIES
-
-/*@media screen and (max-width: $desktop)
-{
-    .restaurants {
-        &__results {
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto auto;
-        }
-    }
-}
-
-@media screen and (max-width: $tablet)
-{
-    .restaurants {
-        &__results {
-            grid-template-columns: auto;
-            grid-template-rows: auto;
-        }
-    }
-}*/

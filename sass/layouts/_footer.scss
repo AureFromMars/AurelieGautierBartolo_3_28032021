@@ -1,5 +1,5 @@
 .footer {
-    background-color: $dark-grey;
+    background-color: $DARK_GREY;
     line-height: 30px;
     padding: 20px;
     @include flexbox(flex, wrap, row, space-between);
@@ -16,7 +16,7 @@
             @include flexbox(flex, wrap, row, space-evenly);
 
             &__item {
-                @include flexitem(1, 1, auto);
+                flex: 1 1 auto;
                 margin-right: 20px;
                 min-width: 200px;
 

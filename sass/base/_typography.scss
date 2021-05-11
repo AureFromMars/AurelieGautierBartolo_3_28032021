@@ -1,8 +1,8 @@
-$headings: 'Shrikhand';
-$texts: 'Roboto', sans-serif;
+$HEADINGS: 'Shrikhand';
+$TEXTS: 'Roboto', sans-serif;
 
 body {
-    font-family: $texts;
+    font-family: $TEXTS;
     
     & a:link, a:visited     {
         text-decoration: none;
@@ -10,11 +10,11 @@ body {
     }
 
     & a:hover {
-        color: $color-primary;
+        color: $COLOR_PRIMARY;
     }
 
     & a:active {
-        color: $color-secondary;
+        color: $COLOR_SECONDARY;
     }
 }
 
@@ -43,7 +43,7 @@ ul {
     color:white;
 
     &-title {
-    font-family: $headings !important;
+    font-family: $HEADINGS !important;
     font-size: 1.1em;
     }
 }

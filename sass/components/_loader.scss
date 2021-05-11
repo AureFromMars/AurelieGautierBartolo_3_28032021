@@ -30,8 +30,8 @@
 		{
 			display: inline-block;
 			margin: 0 0px;
-			color: $color-primary;
-			font-family: $headings;
+			color: $COLOR_PRIMARY;
+			font-family: $HEADINGS;
 			font-size: xx-large;
 			
 			@for $i from 0 through 7

@@ -8,8 +8,8 @@
         color: white;
     }
 
-    >button {
-        box-shadow: 0, 10px, 10px, $medium-grey;
+    .button {
+        box-shadow: 0 10px 10px $MEDIUM_GREY;
         display: block;
         width: 220px;
         border: none;
@@ -19,40 +19,100 @@
         cursor: pointer;
         font-size: 1.01em;
         font-weight: 500;
-        background: linear-gradient(to top left, $color-primary, $color-secondary);
+        background-image: linear-gradient(to top left, $COLOR_PRIMARY, $COLOR_SECONDARY);
+        transition: transform 300ms, background-image 1500ms 150ms;
 
         &:hover {
-            background: linear-gradient(to top left, $color-secondary, $color-primary);
+            background-image: linear-gradient(to top left, $COLOR_SECONDARY, $COLOR_PRIMARY);
+            transform: $SCALE;
         }
     }
 }
 
 .restaurants__results {
     &__card {
-        a {
-            .description {
-                &__btn-heart {
-                    color: transparent;
-                    font-size: 1.5em;
-                    background-size: 100%;
-                    background-repeat: repeat;
-                    transition: transform 400ms, background-image 400ms 150ms;
-                    -webkit-text-stroke: 1px;
-                    -webkit-background-clip: text;
-                    -webkit-text-stroke-color: black;
-                    -moz-background-clip: text;
+        // &__btn-heart {
+        //     // .description {
+        //     //     &__btn-heart {
+        //             margin: 10px 10px 0 0;
+        //             color: transparent;
+        //             font-size: 1.5em;
+        //             transition: transform 300ms, background-image 300ms 150ms;
+        //             -webkit-text-stroke: 1px;
+        //             -webkit-text-stroke-color: black;
+        //             -webkit-background-clip: text;
                     
-                    &:hover {
-                        background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
-                        font-size: 1.1em;
-                        -webkit-text-stroke: 0px;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent; 
-                        -moz-background-clip: text;
-                        -moz-text-fill-color: transparent;
-                    }
-                }
-            }
+        //             &:hover {// arrivée en slide ou pop
+        //                 background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
+        //                 //animation: pulse 0.3s linear 1;
+        //                 animation: pulse 0.5s ease-in infinite;
+        //                 -webkit-text-stroke-color: transparent;
+        //                 //-webkit-text-fill-color: transparent; 
+        //                 //-moz-text-fill-color: transparent;// INSTALLER UN PREFIXEUR POUR SASS
+        //             }
+
+        //             &:active {// arrivée en slide ou pop
+        //                 background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
+        //                 -webkit-text-stroke-color: transparent;
+        //             }
+
+        //             @keyframes pulse {
+        //                 25% {transform: scale(0.9);}
+        //                 75% {transform: scale(1.1);}
+        //             }
+        //     //     }
+        //     // }
+        // }
+    }
+}
+
+
+.restaurants__results {
+
+    #heart1, #heart2, #heart3, #heart4{
+        // display: none;
+        position: absolute;
+        left: -100vw;
+    }
+
+    label[for=heart1], label[for=heart2], label[for=heart3], label[for=heart4] {
+        cursor: pointer;
+        position: relative;
+        right: 0;
+        top: 0;
+        margin: 10px 10px 0 0;
+        color: transparent;
+        font-size: 1.5em;
+        transition: transform 300ms, background-image 300ms 150ms;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: black;
+        -webkit-background-clip: text;
+
+        &:hover {
+            background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
+            animation: pulse 0.5s ease-in infinite;
+            -webkit-text-stroke-color: transparent;
+        }
+
+        &::selection {
+            color: none;
+            background: transparent;
         }
     }
+
+    #heart1, #heart2, #heart3, #heart4{
+        
+
+        &:checked + label {
+            background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
+            -webkit-text-stroke-color: transparent;
+            will-change: font-size;
+            animation: pulse 0.5s ease-in;
+        }
+    }
+}
+
+@keyframes pulse {
+    25% {transform: scale(0.9);}
+    75% {transform: scale(1.1);}
 }

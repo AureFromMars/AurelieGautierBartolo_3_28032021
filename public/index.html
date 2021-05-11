@@ -41,7 +41,7 @@
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                      </div>
                      <div class="form-button">
-                        <a href="#restaurants-anchor" title="Explorez nos restaurants"><button>Explorez nos restaurants</a></button>
+                        <a href="#restaurants-anchor" title="Explorez nos restaurants"><button class="button">Explorez nos restaurants</a></button><!-- Pourquoi j'ai croisé a et button ? -->
                     </div>
                 </form>
             </header>
@@ -64,46 +64,68 @@
                         </li>
                     </ul>
                 </section>
-                <article id="restaurants-anchor" class="restaurants" href="#restaurants">
+                <article class="restaurants" id="restaurants-anchor" href="#restaurants">
                     <h2>Restaurants</h2>
                     <ul class="restaurants__results">
                         <li class="restaurants__results__card">
-                            <a href="restaurants/menilmontant_la-palette-du-gout.html" title="La palette du goût">
-                                <span class="new">Nouveau</span>
-                                <img src="img/menilmontant_la-palette-du-gout.jpg" alt="Image La palette du goût"/>
-                                <span class="description">
-                                    <span><h3 class="description__text">La palette du goût</h3><p>Ménilmontant</p></span>
-                                    <i class="description__btn-heart fas fa-heart"></i>
-                                </span>
+                            <a class="restaurants__results__card__image new" href="restaurants/menilmontant_la-palette-du-gout.html" title="La palette du goût">
+                                <img src="img/menilmontant_la-palette-du-gout.jpg" alt="Image du restaurant La palette du goût"/>
                             </a>
+                            <span class="restaurants__results__card__description">
+                                <a class="restaurants__results__card__description__text" href="restaurants/menilmontant_la-palette-du-gout.html" title="La palette du goût">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </a>
+                                <input id="heart1" type="checkbox" />
+                                <label for="heart1">
+                                    <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                                </label>
+                            </span>
                         </li>
                         <li class="restaurants__results__card">
-                            <a href="restaurants/charonne_la-note-enchantee.html" title="La note enchantée">
-                                <span class="new">Nouveau</span>
-                                <img src="img/charonne_la-note-enchantee.jpg" alt="Image La note enchantée"/>
-                                <span class="description">
-                                    <span><h3 class="description__text">La note enchantée</h3><p>Charonne</p></span>
-                                    <i class="description__btn-heart fas fa-heart"></i>
-                                </span>
+                            <a class="restaurants__results__card__image new" href="restaurants/charonne_la-note-enchantee.html" title="La note enchantée">
+                                <img src="img/charonne_la-note-enchantee.jpg" alt="Image du restaurant La note enchantée"/>
                             </a>
+                            <span class="restaurants__results__card__description">
+                                <a class="restaurants__results__card__description__text" href="restaurants/charonne_la-note-enchantee.html" title="La note enchantée">
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </a>
+                                <input id="heart2" type="checkbox" />
+                                <label for="heart2">
+                                    <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                                </label>
+                            </span>
                         </li>
                         <li class="restaurants__results__card">
-                            <a href="restaurants/cite-rouge_a-la-francaise.html" title="À la française">
-                                <img src="img/cite-rouge_a-la-francaise.jpg" alt="Image À la française"/>
-                                <span class="description">
-                                    <span><h3 class="description__text">À la française</h3><p>Cité Rouge</p></span>
-                                    <i class="description__btn-heart fas fa-heart"></i>
-                                </span>
+                            <a class="restaurants__results__card__image" href="restaurants/cite-rouge_a-la-francaise.html" title="À la française">
+                                <img src="img/cite-rouge_a-la-francaise.jpg" alt="Image du restaurant À la française"/>
                             </a>
+                            <span class="restaurants__results__card__description">
+                                <a class="restaurants__results__card__description__text" href="restaurants/cite-rouge_a-la-francaise.html" title="À la française">
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </a>
+                                <input id="heart3" type="checkbox" />
+                                <label for="heart3">
+                                    <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                                </label>
+                            </span>
                         </li>
                         <li class="restaurants__results__card">
-                            <a href="restaurants/folie-mericourt_le-delice-des-sens.html" title="Le délice des sens">
-                                <img src="img/folie-mericourt_le-delice-des-sens.jpg" alt="Image Le délice des sens"/>
-                                <span class="description">
-                                    <span><h3 class="description__text">Le délice des sens</h3><p>Folie-Méricourt</p></span>
-                                    <i class="description__btn-heart fas fa-heart"></i>
-                                </span>
+                            <a class="restaurants__results__card__image" href="restaurants/folie-mericourt_le-delice-des-sens.html" title="Le délice des sens">
+                                <img src="img/folie-mericourt_le-delice-des-sens.jpg" alt="Image du restaurant Le délice des sens"/>
                             </a>
+                            <span class="restaurants__results__card__description">
+                                <a class="restaurants__results__card__description__text" href="restaurants/folie-mericourt_le-delice-des-sens.html" title="Le délice des sens">
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </a>
+                                <input id="heart4" type="checkbox" />
+                                <label for="heart4">
+                                    <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                                </label>
+                            </span>
                         </li>
                     </ul>
                 </article>

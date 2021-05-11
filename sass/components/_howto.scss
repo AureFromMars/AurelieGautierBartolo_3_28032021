@@ -2,21 +2,22 @@
     &-stepping {
         margin-top: 25px;
 
-        &__item {
+        &__item {// PASSER EN COLONNE AVANT WRAP // NUMERO EN HAUT // MAXWIDTH AND MIN WIDTH
             @include flexbox(flex, nowrap, row);
-            @include flexitem(1, 1);
-            box-shadow: 2px 5px 12px 0px $high-grey;
+            flex: 0 0 320px;
+            box-shadow: 2px 5px 12px 0px $HIGH_GREY;
             font-weight: 600;
             font-size: 0.9em;
             height: 75px;
             line-height: 20px;
-            max-width: 400px;
+            width: 320px;
             border: none;
             border-radius: 20px;
-            background-color: $light-grey;
+            background-color: $LIGHT_GREY;
             margin: 0 20px 22px 15px;
             align-items: center;
             cursor: pointer;
+            padding-right: 20px;
 
             &::before {
                 transform: translate(-12px);
@@ -25,7 +26,7 @@
                 line-height: 25px;
                 text-align: center;
                 border-radius: 50%;
-                background-color: $color-primary;
+                background-color: $COLOR_PRIMARY;
                 color: white;
                 font-weight: normal;
                 font-size: 0.9em;
@@ -41,12 +42,12 @@
                 &::before { content: "3"; }
             }
 
-            &__icon {
+            &__icon {// CHOISIR ENTRE FONTAWESOME ET SVG...
                 width: 20px;
                 height: 30px;
                 line-height: 30px;
                 margin:20px;
-                color: $xhigh-grey;
+                color: $XHIGHT_GREY;
 
                 i {
                     width: 1em;
@@ -57,10 +58,10 @@
             }
 
             &:hover {
-                background-color: $color-primary-light;
+                background-color: $COLOR_PRIMARY_LIGHT;//OPACITY
 
                 i {
-                    color: $color-primary;
+                    color: $COLOR_PRIMARY;
                 }
             }
         }

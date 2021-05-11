@@ -1,6 +1,6 @@
 .form {
     @include flexbox(flex, wrap, column, space-between);
-    background-color: $light-grey;
+    background-color: $LIGHT_GREY;
     align-items: center;
     text-align : center;
     width: 100%;
@@ -9,12 +9,12 @@
     padding-bottom: 57px;
 
     &-search {
-        background-color: $medium-grey;
+        background-color: $MEDIUM_GREY;
         width: 100%;
         padding: 15px 0;
 
         > * {
-            color: $dark-grey;
+            color: $DARK_GREY;
         }
 
         > input {

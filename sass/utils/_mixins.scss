@@ -1,4 +1,4 @@
-@mixin position-center($text-align: center)//utilisé dans loader --> à vérifier
+@mixin position-center($TEXT_ALIGN: center)//utilisé dans loader --> à vérifier, ça m'a pas l'air bon du tout !
 {
 	position: absolute;
 	top: 0;
@@ -6,55 +6,41 @@
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	text-align: $text-align;
+	text-align: center;
 }
 
-@mixin flexbox($display: null, $wrap: null, $direction: null, $justify: null) {
-	@if $display != null {
-		display: $display;
+@mixin flexbox($DISPLAY: null, $WRAP: null, $DIRECTION: null, $JUSTIFY: null) {
+	@if $DISPLAY != null {
+		display: $DISPLAY;
 	}
 	
-	@if $wrap != null {
-		flex-wrap: $wrap;
+	@if $WRAP != null {
+		flex-wrap: $WRAP;
 	}
 	
-	@if $direction != null {
-		flex-direction: $direction;
+	@if $DIRECTION != null {
+		flex-direction: $DIRECTION;
 	}
 	
-	@if $justify != null {
-		justify-content: $justify;
-	}
-}
-
-@mixin flexitem($grow: null, $shrink: null, $basis: null) {
-	@if $grow != null {
-		flex-grow: $grow;
-	}
-	
-	@if $shrink != null {
-		flex-shrink: $shrink;
-	}
-	
-	@if $basis != null {
-		flex-basis: $basis;
+	@if $JUSTIFY != null {
+		justify-content: $JUSTIFY;
 	}
 }
 
 @mixin desktop{
-	@media screen and (max-width: #{$desktop}) {
+	@media screen and (max-width: #{$DESKTOP}) {
 		@content;
 	}
 }
 
 @mixin tablet{
-	@media screen and (max-width: #{$tablet}) {
+	@media screen and (max-width: #{$TABLET}) {
 		@content;
 	}
 }
 
 @mixin phone{
-	@media screen and (max-width: #{$phone}) {
+	@media screen and (max-width: #{$PHONE}) {
 		@content;
 	}
 }

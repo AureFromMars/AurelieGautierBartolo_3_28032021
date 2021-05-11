@@ -11,6 +11,8 @@ main.scss : contient les imports des autres feuilles de style
 
 */
 
+@charset 'utf-8';// pour forcer l'encodage en cas de problème
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
 @import "./utils/extensions";
