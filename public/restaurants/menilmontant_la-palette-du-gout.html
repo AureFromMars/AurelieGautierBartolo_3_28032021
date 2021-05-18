@@ -1,64 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>ohmyfood - Restaurant La palette du goût</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Bienvenue sur le site Internet d'ohmyfood !">
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link rel="icon" href="../favicon.ico">
+        <script src="https://kit.fontawesome.com/05ffc8aabd.js" crossorigin="anonymous"></script>
+        <title>La palette du goût à Menilmontant, powered by ohmyfood</title>
     </head>
     <body>
         <div id="bloc-page">
             <!-- HEADER -->
             <header>
-                <nav>
-                    <a href="index.html"><img src="images/ohmyfood_logo.svg" alt="ohmyfood" title="Page d'accueil de ohmyfood"/></a>
+                <nav class="logo">
+                    <a href="../index.html"><i class="fas fa-arrow-left"></i><img src="../img/ohmyfood_logo.svg" alt="ohmyfood" title="Page d'accueil de ohmyfood"/></a>
                 </nav>
             </header>
             <!-- MAIN -->
             <main>
-            <p>La palette du goût
-
-                Entrées
-                Fricassée d'escargot
-                Au piment d'Espelette 
-                25€
-                
-                Foie gras de canard mi-cuit
-                Et ses copeaux de truffe noire
-                35€
-                
-                Oeuf au plat
-                Assaisonné à la truffe sur lit de caviar
-                20€
-                
-                
-                Plats
-                Filet de boeuf aux herbes
-                Accompagné de sa ribambelle de légumes
-                40€
-                
-                Parmentier de queue de boeuf
-                À la truffe noire sur sa purée de panais
-                35€
-                
-                Filet de turbot
-                Aux agrumes
-                44€
-                        
-                Desserts
-                Paris-Brest
-                Revisité
-                18€
-                
-                Macaron au chocolat d'exception 
-                Et glace à la vanille de Madagascar
-                22€
-                
-                Mousse au chocolat 
-                Au piment d'Espelette et à la truffe noire
-                23€
-            </p>
+                <div class="picture">
+                    <img src="../img/restaurants/menilmontant_la-palette-du-gout.jpg" alt="Image du restaurant La palette du goût"/>
+                </div>
+                <div class="menu">
+                    <section class="menu__title">
+                        <h1>La palette du goût</h1>
+                        <span>
+                            <input id="heartMenu" type="checkbox" />
+                            <label for="heartMenu">
+                                <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                            </label>
+                        </span>
+                    </section>
+                    <section class="menu__starters">
+                        <h2>Entrées</h2>
+                        <div class="menu-underline"></div>
+                        <ul class="menu-cards">
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Fricassée d'escargot</h3>
+                                        <p>Au piment d'Espelette</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">25€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Foie gras de canard mi-cuit</h3>
+                                        <p>Et ses copeaux de truffe noire</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">35€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Oeuf au plat</h3>
+                                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">20€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="menu__mains">
+                        <h2>Plats</h2>
+                        <div class="menu-underline"></div>
+                        <ul class="menu-cards">
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Fricassée d'escargot</h3>
+                                        <p>Accompagné de sa ribambelle de légumes</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">40€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Parmentier de queue de boeuf</h3>
+                                        <p>À la truffe noire sur sa purée de panais</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">35€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Filet de turbot</h3>
+                                        <p>Aux agrumes</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">44€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="menu__desserts">
+                        <h2>Desserts</h2>
+                        <div class="menu-underline"></div>
+                        <ul class="menu-cards">
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Paris-Brest</h3>
+                                        <p>Revisité</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">18€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Macaron au chocolat d'exception</h3>
+                                        <p>Et glace à la vanille de Madagascar</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">22€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Mousse au chocolat</h3>
+                                        <p>Au piment d'Espelette et à la truffe noire</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">23€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                        </ul>
+                    </section>
+                    <form class="form">
+                        <div class="form-button">
+                            <button class="button">Commander</button>
+                        </div>
+                    </form>
+                </div>
             </main>
             <!-- FOOTER -->
-            <footer class="flex wrap row">
-
+            <footer class="footer">
+                <h2 class="footer-title">ohmyfood</h2>
+                <nav class="footer-nav">
+                    <ul class="footer-nav__list flex wrap row">
+                        <li class="footer-nav__list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i><b>Proposer un restaurant</b></a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i><b>Devenir partenaire</b></a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Consultez les mentions légales">Mentions légales</a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</a></li>
+                    </ul>
+                </nav>
             </footer>
         </div>
     </body>

@@ -3,75 +3,172 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="brand.css" />
-        <link rel="stylesheet" href="framework.css" />
+        <meta name="description" content="Bienvenue sur le site Internet d'ohmyfood !">
+        <link rel="stylesheet" href="../css/style.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"><!--SHRIKHAND-->
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"><!--ROBOTO-->
-        <link rel="icon" href="ohmyfood-favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link rel="icon" href="../favicon.ico">
         <script src="https://kit.fontawesome.com/05ffc8aabd.js" crossorigin="anonymous"></script>
-        <title>ohmyfood</title>
+        <title>La note enchantée à Charonne, powered by ohmyfood</title>
     </head>
     <body>
         <div id="bloc-page">
             <!-- HEADER -->
             <header>
-                <nav>
-                    <a href="index.html"><img src="images/ohmyfood_logo.svg" alt="ohmyfood" title="Page d'accueil de ohmyfood"/></a>
+                <nav class="logo">
+                    <a href="../index.html"><i class="fas fa-arrow-left"></i><img src="../img/ohmyfood_logo.svg" alt="ohmyfood" title="Page d'accueil de ohmyfood"/></a>
                 </nav>
             </header>
             <!-- MAIN -->
             <main>
-            <p>La note enchantée
-                
-                Entrées
-                Ravioles de foie gras 
-                Accompagnés de leur crème à la truffe
-                25€
-                
-                Caviar osciètre 
-                Sur blini à la farine de blé noir
-                35€
-                
-                Homard et espuma de potiron
-                Mariné aux zestes d'orange
-                20€
-                
-                Foie gras de canard cuit entier
-                Confiture de figue et pain toasté
-                35€
-                        
-                Plats
-                Noix de coquilles Saint-Jacques
-                Sur lit de purée de céleri-rave
-                40€
-                
-                Langoustine poêlée
-                Purée de patate douce
-                35€
-                
-                Mijoté de queue de boeuf 
-                Et riz sauvage aux zestes de citron
-                44€
-                
-                Desserts
-                Macaron noisette et chocolat
-                Glace au caramel brun et sel de Guérande
-                18€
-                
-                Baba au rhum revisité 
-                Avec son coulis de citron
-                22€
-                
-                Tarte au citron meringuée 
-                Déstructurée
-                23€
-            </p>
+                <div class="picture">
+                    <img src="../img/restaurants/menilmontant_la-palette-du-gout.jpg" alt="Image du restaurant La palette du goût"/>
+                </div>
+                <div class="menu">
+                    <section class="menu__title">
+                        <h1>La note enchantée</h1>
+                        <span>
+                            <input id="heartMenu" type="checkbox" />
+                            <label for="heartMenu">
+                                <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                            </label>
+                        </span>
+                    </section>
+                    <section class="menu__starters">
+                        <h2>Entrées</h2>
+                        <div class="menu-underline"></div>
+                        <ul class="menu-cards">
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Ravioles de foie gras</h3>
+                                        <p>Accompagnés de leur crème à la truffe</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">25€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Caviar osciètre</h3>
+                                        <p>Sur blini à la farine de blé noir</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">35€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Homard et espuma de potiron</h3>
+                                        <p>Mariné aux zestes d'orange</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">20€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Foie gras de canard cuit entier</h3>
+                                        <p>Confiture de figue et pain toasté</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">35€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="menu__mains">
+                        <h2>Plats</h2>
+                        <div class="menu-underline"></div>
+                        <ul class="menu-cards">
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Noix de coquilles Saint-Jacques</h3>
+                                        <p>Sur lit de purée de céleri-rave</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">40€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Langoustine poêlée</h3>
+                                        <p>À la truffe noire sur sa purée de panais</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">35€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Mijoté de queue de boeuf</h3>
+                                        <p>Et riz sauvage aux zestes de citron</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">44€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="menu__desserts">
+                        <h2>Desserts</h2>
+                        <div class="menu-underline"></div>
+                        <ul class="menu-cards">
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Glace au caramel brun et sel de Guérande</h3>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">18€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Baba au rhum revisité </h3>
+                                        <p>Avec son coulis de citron</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">22€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                            <li class="menu-cards__item">
+                                <span class="menu-cards__item__content">
+                                    <span class="menu-cards__item__content__text">
+                                        <h3>Tarte au citron meringuée </h3>
+                                        <p>Déstructurée</p>
+                                    </span>
+                                    <span class="menu-cards__item__content__price">23€</span>
+                                </span>
+                                <span class="menu-cards__item--check"><i class="fas fa-check-circle"></i></span>
+                            </li>
+                        </ul>
+                    </section>
+                    <form class="form">
+                        <div class="form-button">
+                            <button class="button">Commander</button>
+                        </div>
+                    </form>
+                </div>
             </main>
             <!-- FOOTER -->
-            <footer class="flex wrap row">
-
+            <footer class="footer">
+                <h2 class="footer-title">ohmyfood</h2>
+                <nav class="footer-nav">
+                    <ul class="footer-nav__list flex wrap row">
+                        <li class="footer-nav__list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i><b>Proposer un restaurant</b></a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i><b>Devenir partenaire</b></a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Consultez les mentions légales">Mentions légales</a></li>
+                        <li class="footer-nav__list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</a></li>
+                    </ul>
+                </nav>
             </footer>
         </div>
     </body>

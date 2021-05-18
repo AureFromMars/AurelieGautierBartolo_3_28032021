@@ -23,15 +23,15 @@
         transition: transform 300ms, background-image 1500ms 150ms;
 
         &:hover {
-            background-image: linear-gradient(to top left, $COLOR_SECONDARY, $COLOR_PRIMARY);
+            // background-image: linear-gradient(to top left, $COLOR_SECONDARY, $COLOR_PRIMARY);
             transform: $SCALE;
         }
     }
 }
 
-.restaurants__results {
+.restaurants__results, .menu__title {
 
-    #heart1, #heart2, #heart3, #heart4{
+    #heart1, #heart2, #heart3, #heart4, #heartMenu {
         display: none;
 
         &:checked + label {
@@ -42,7 +42,7 @@
         }
     }
 
-    label[for=heart1], label[for=heart2], label[for=heart3], label[for=heart4] {
+    label[for=heart1], label[for=heart2], label[for=heart3], label[for=heart4], label[for=heartMenu] {
         cursor: pointer;
         position: relative;
         right: 0;

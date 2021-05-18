@@ -1,12 +1,26 @@
 .howto {
-    margin-top: 50px;
-    margin-left: 20px;
-    margin: 50px 0 45px 20px;
+    margin: 50px 0 45px 15px;
 
     &-stepping {
         @include flexbox(flex, wrap, row, space-between);
         width: 100%;
         margin-top: 25px;
+
+        &__item {
+            @include flexbox(flex, nowrap, row);
+            flex: 0 0 320px;
+        }
+
+        @media (max-width: $HOWTO) {
+            @include flexbox(flex, wrap, column, center);
+
+            &__item {
+                flex: 0 0 75px;
+                width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
 }
 

@@ -1,0 +1,115 @@
+// nav>i {
+//     position: fixed;
+
+// }
+
+
+main {
+    @include flexbox(flex, nowrap, column);
+    margin-top: 50px
+}
+
+.picture {
+    @include flexbox(flex);
+    z-index: 1;
+    // position: fixed;
+    width: 100%;
+    margin-bottom: -50px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        flex: 1 0;
+    }
+}
+
+.menu {
+    @include flexbox(flex, nowrap, column);
+    z-index: 2;
+    background-color: $LIGHT_GREY;
+    border-radius: 50px 50px 0 0;
+    padding: 50px 20px;
+    position: relative;
+
+    &__title {
+        @include flexbox(flex, nowrap, row);
+        align-items: center;
+        font-family: $HEADINGS !important;
+
+        h1 {
+            margin-right: 20px;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: -5px;
+    }
+
+    &-underline {
+        width: 50px;
+        border: 2px solid $COLOR_TERTIARY;
+        margin: 10px 0;
+    }
+
+    &-cards {
+        @include flexbox (flex, wrap, row, center);
+        
+        &__item {
+            @include flexbox (flex);
+            box-shadow: 2px 5px 12px 0px $HIGH_GREY;
+            height: 75px;
+            flex: 1 1 100%;
+            max-width: 450px;
+            border: none;
+            border-radius: 15px;
+            background-color: white;
+            margin: 0 20px 22px 15px;
+            cursor: pointer;
+            overflow: hidden;
+
+            &__content {
+                @include flexbox (flex, nowrap, row, space-between);
+                // flex: 0 0 100%;
+                width: 100%;
+                padding: 20px;
+                align-items: end;
+                overflow: hidden;
+
+                &__text {
+                    @include flexbox (flex, nowrap, column);
+                    // flex: 1 1 100%;
+                    width: 100%;
+
+                    >* {
+                        // flex: 1 1;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+
+                &__price {
+                    font-weight: bold;
+                }
+            }
+
+            &--check {
+                @include flexbox (flex, nowrap, null, center);
+                flex: 0 0 0;
+                height: 100%;
+                background: $COLOR_TERTIARY;
+                overflow: hidden;
+                transition: all 0.2s linear;
+                color: white;
+                font-size: x-large;
+                align-items: center;
+                text-align: center;
+            }
+
+            &:hover &--check {
+                flex-basis: 65px;
+            }
+        }        
+    }
+}

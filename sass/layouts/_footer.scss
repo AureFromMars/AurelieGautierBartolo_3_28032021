@@ -3,6 +3,7 @@
     line-height: 30px;
     padding: 20px;
     @include flexbox(flex, wrap, row, space-between);
+    position: relative;
 
     .footer-title {
         margin-right: 10px;

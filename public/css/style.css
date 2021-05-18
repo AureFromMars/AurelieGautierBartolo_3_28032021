@@ -100,20 +100,19 @@ ul {
   transition: transform 300ms, background-image 1500ms 150ms;
 }
 .form-button .button:hover {
-  background-image: linear-gradient(to top left, #FF79DA, #9356DC);
   transform: scale(1.02);
 }
 
-.restaurants__results #heart1, .restaurants__results #heart2, .restaurants__results #heart3, .restaurants__results #heart4 {
+.restaurants__results #heart1, .restaurants__results #heart2, .restaurants__results #heart3, .restaurants__results #heart4, .restaurants__results #heartMenu, .menu__title #heart1, .menu__title #heart2, .menu__title #heart3, .menu__title #heart4, .menu__title #heartMenu {
   display: none;
 }
-.restaurants__results #heart1:checked + label, .restaurants__results #heart2:checked + label, .restaurants__results #heart3:checked + label, .restaurants__results #heart4:checked + label {
+.restaurants__results #heart1:checked + label, .restaurants__results #heart2:checked + label, .restaurants__results #heart3:checked + label, .restaurants__results #heart4:checked + label, .restaurants__results #heartMenu:checked + label, .menu__title #heart1:checked + label, .menu__title #heart2:checked + label, .menu__title #heart3:checked + label, .menu__title #heart4:checked + label, .menu__title #heartMenu:checked + label {
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-text-stroke-color: transparent;
   will-change: font-size;
   animation: pulse 0.5s ease-in;
 }
-.restaurants__results label[for=heart1], .restaurants__results label[for=heart2], .restaurants__results label[for=heart3], .restaurants__results label[for=heart4] {
+.restaurants__results label[for=heart1], .restaurants__results label[for=heart2], .restaurants__results label[for=heart3], .restaurants__results label[for=heart4], .restaurants__results label[for=heartMenu], .menu__title label[for=heart1], .menu__title label[for=heart2], .menu__title label[for=heart3], .menu__title label[for=heart4], .menu__title label[for=heartMenu] {
   cursor: pointer;
   position: relative;
   right: 0;
@@ -127,12 +126,12 @@ ul {
   -webkit-text-stroke-color: black;
   -webkit-background-clip: text;
 }
-.restaurants__results label[for=heart1]:hover, .restaurants__results label[for=heart2]:hover, .restaurants__results label[for=heart3]:hover, .restaurants__results label[for=heart4]:hover {
+.restaurants__results label[for=heart1]:hover, .restaurants__results label[for=heart2]:hover, .restaurants__results label[for=heart3]:hover, .restaurants__results label[for=heart4]:hover, .restaurants__results label[for=heartMenu]:hover, .menu__title label[for=heart1]:hover, .menu__title label[for=heart2]:hover, .menu__title label[for=heart3]:hover, .menu__title label[for=heart4]:hover, .menu__title label[for=heartMenu]:hover {
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   animation: pulse 0.5s ease-in infinite;
   -webkit-text-stroke-color: transparent;
 }
-.restaurants__results label[for=heart1]::selection, .restaurants__results label[for=heart2]::selection, .restaurants__results label[for=heart3]::selection, .restaurants__results label[for=heart4]::selection {
+.restaurants__results label[for=heart1]::selection, .restaurants__results label[for=heart2]::selection, .restaurants__results label[for=heart3]::selection, .restaurants__results label[for=heart4]::selection, .restaurants__results label[for=heartMenu]::selection, .menu__title label[for=heart1]::selection, .menu__title label[for=heart2]::selection, .menu__title label[for=heart3]::selection, .menu__title label[for=heart4]::selection, .menu__title label[for=heartMenu]::selection {
   color: none;
   background: transparent;
 }
@@ -297,13 +296,10 @@ ul {
 }
 
 .howto-stepping__item {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  flex: 0 0 320px;
   box-shadow: 2px 5px 12px 0px #cfcfcf;
   font-weight: 600;
   font-size: 0.9em;
+  letter-spacing: -0.8px;
   height: 75px;
   border: none;
   border-radius: 20px;
@@ -325,19 +321,33 @@ ul {
   font-weight: normal;
   font-size: 0.9em;
 }
+.howto-stepping__item__svgContainer {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  margin-left: 10px;
+}
 .howto-stepping__item__1::before {
   content: "1";
+}
+.howto-stepping__item__1 svg {
+  height: 20px;
 }
 .howto-stepping__item__2::before {
   content: "2";
 }
+.howto-stepping__item__2 svg {
+  height: 20px;
+  width: 15px;
+}
 .howto-stepping__item__3::before {
   content: "3";
 }
+.howto-stepping__item__3 svg {
+  height: 18px;
+  width: 18px;
+}
 .howto-stepping__item svg {
-  width: 20px;
-  height: 30px;
-  object-fit: fill;
   filter: invert(52%) sepia(18%) saturate(3%) hue-rotate(28deg) brightness(91%) contrast(95%);
 }
 .howto-stepping__item:hover {
@@ -357,15 +367,20 @@ header nav {
   padding-top: 10px;
   background-color: white;
 }
-header nav > a {
+header nav a {
   display: flex;
   width: 100%;
   align-items: center;
 }
-header nav > a > img {
+header nav a i {
+  font-size: x-large;
+  margin-left: 20px;
+}
+header nav a img {
   flex: 1 1 100%;
   display: block;
   height: 53%;
+  margin-left: -20px;
 }
 
 .form {
@@ -417,6 +432,7 @@ header nav > a > img {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 .footer .footer-title {
   margin-right: 10px;
@@ -443,9 +459,7 @@ header nav > a > img {
 }
 
 .howto {
-  margin-top: 50px;
-  margin-left: 20px;
-  margin: 50px 0 45px 20px;
+  margin: 50px 0 45px 15px;
 }
 .howto-stepping {
   display: flex;
@@ -454,6 +468,26 @@ header nav > a > img {
   justify-content: space-between;
   width: 100%;
   margin-top: 25px;
+}
+.howto-stepping__item {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  flex: 0 0 320px;
+}
+@media (max-width: 1150px) {
+  .howto-stepping {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .howto-stepping__item {
+    flex: 0 0 75px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .restaurants {
@@ -468,6 +502,115 @@ header nav > a > img {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: auto;
   grid-gap: 15px;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.picture {
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: -50px;
+}
+.picture img {
+  width: 100%;
+  object-fit: cover;
+  flex: 1 0;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  z-index: 2;
+  background-color: #f6f6f6;
+  border-radius: 50px 50px 0 0;
+  padding: 50px 20px;
+  position: relative;
+}
+.menu__title {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Shrikhand" !important;
+}
+.menu__title h1 {
+  margin-right: 20px;
+}
+.menu h2 {
+  text-transform: uppercase;
+  margin-bottom: -5px;
+}
+.menu-underline {
+  width: 50px;
+  border: 2px solid #99E2D0;
+  margin: 10px 0;
+}
+.menu-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.menu-cards__item {
+  display: flex;
+  box-shadow: 2px 5px 12px 0px #cfcfcf;
+  height: 75px;
+  flex: 1 1 100%;
+  max-width: 450px;
+  border: none;
+  border-radius: 15px;
+  background-color: white;
+  margin: 0 20px 22px 15px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.menu-cards__item__content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  align-items: end;
+  overflow: hidden;
+}
+.menu-cards__item__content__text {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+}
+.menu-cards__item__content__text > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-cards__item__content__price {
+  font-weight: bold;
+}
+.menu-cards__item--check {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex: 0 0 0;
+  height: 100%;
+  background: #99E2D0;
+  overflow: hidden;
+  transition: all 0.2s linear;
+  color: white;
+  font-size: x-large;
+  align-items: center;
+  text-align: center;
+}
+.menu-cards__item:hover .menu-cards__item--check {
+  flex-basis: 65px;
 }
 
 /*# sourceMappingURL=style.css.map */
