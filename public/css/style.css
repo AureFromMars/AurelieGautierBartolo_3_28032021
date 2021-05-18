@@ -119,6 +119,7 @@ ul {
   right: 0;
   top: 0;
   margin: 10px 10px 0 0;
+  padding: 5px;
   color: transparent;
   font-size: 1.5em;
   transition: transform 300ms, background-image 300ms 150ms;
@@ -295,9 +296,6 @@ ul {
   height: auto;
 }
 
-.howto-stepping {
-  margin-top: 25px;
-}
 .howto-stepping__item {
   display: flex;
   flex-wrap: nowrap;
@@ -307,7 +305,6 @@ ul {
   font-weight: 600;
   font-size: 0.9em;
   height: 75px;
-  line-height: 20px;
   border: none;
   border-radius: 20px;
   background-color: #f6f6f6;
@@ -337,24 +334,17 @@ ul {
 .howto-stepping__item__3::before {
   content: "3";
 }
-.howto-stepping__item__icon {
+.howto-stepping__item svg {
   width: 20px;
   height: 30px;
-  line-height: 30px;
-  margin: 20px;
-  color: #7e7e7e;
-}
-.howto-stepping__item__icon i {
-  width: 1em;
-  height: 1em;
-  margin: 0;
-  padding: 0;
+  object-fit: fill;
+  filter: invert(52%) sepia(18%) saturate(3%) hue-rotate(28deg) brightness(91%) contrast(95%);
 }
 .howto-stepping__item:hover {
   background-color: #f5edff;
 }
-.howto-stepping__item:hover i {
-  color: #9356DC;
+.howto-stepping__item:hover svg {
+  filter: invert(41%) sepia(23%) saturate(6862%) hue-rotate(244deg) brightness(92%) contrast(87%);
 }
 
 header nav {
@@ -463,6 +453,7 @@ header nav > a > img {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  margin-top: 25px;
 }
 
 .restaurants {

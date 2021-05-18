@@ -1,6 +1,5 @@
 .howto {
     &-stepping {
-        margin-top: 25px;
 
         &__item {// PASSER EN COLONNE AVANT WRAP // NUMERO EN HAUT // MAXWIDTH AND MIN WIDTH
             @include flexbox(flex, nowrap, row);
@@ -9,8 +8,7 @@
             font-weight: 600;
             font-size: 0.9em;
             height: 75px;
-            line-height: 20px;
-            // width: 320px;
+            // line-height: 10px;
             border: none;
             border-radius: 20px;
             background-color: $LIGHT_GREY;
@@ -42,26 +40,39 @@
                 &::before { content: "3"; }
             }
 
-            &__icon {// CHOISIR ENTRE FONTAWESOME ET SVG...
+            // &__container {
+            //     @include flexbox(flex, nowrap, row, stretch);
+            //     align-items: stretch;
+            //     width: 10px;
+            //     height: 40px;
+            //     margin-left: 15px;
+            //     margin-right: 20px;
+            // }
+
+            // &__icon {//SVG car possible de modifier facilement le rapport hauteur/largeur
+            svg {
                 width: 20px;
                 height: 30px;
-                line-height: 30px;
-                margin:20px;
-                color: $XHIGHT_GREY;
+                object-fit: fill;
+                // transform:scaleX(0.9) scaleY(1);
+                // line-height: 30px;
+                // margin-left:15px;
+                // margin-right: 20px;
+                // color: $XHIGHT_GREY;
+                filter: invert(52%) sepia(18%) saturate(3%) hue-rotate(28deg) brightness(91%) contrast(95%);
 
-                i {
-                    width: 1em;
-                    height: 1em;
-                    margin: 0;
-                    padding: 0;
+                img {
+                    // width: 80%;
+                    // height: 100%;
+                    // object-fit: fill;
                 }
             }
 
             &:hover {
                 background-color: $COLOR_PRIMARY_LIGHT;//OPACITY
 
-                i {
-                    color: $COLOR_PRIMARY;
+                svg {
+                    filter:  invert(41%) sepia(23%) saturate(6862%) hue-rotate(244deg) brightness(92%) contrast(87%);//CSS filter generator https://codepen.io/sosuke/pen/Pjoqqp
                 }
             }
         }
