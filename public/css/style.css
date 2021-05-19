@@ -117,10 +117,9 @@ ul {
   position: relative;
   right: 0;
   top: 0;
-  margin: 10px 10px 0 0;
   padding: 5px;
   color: transparent;
-  font-size: 1.5em;
+  font-size: 1.4em;
   transition: transform 300ms, background-image 300ms 150ms;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: black;
@@ -254,7 +253,7 @@ ul {
   content: "Nouveau";
   position: absolute;
   right: 0;
-  margin-top: 10px;
+  margin-top: 12px;
   margin-right: 10px;
   width: auto;
   padding: 5px 10px;
@@ -267,24 +266,23 @@ ul {
   flex-wrap: nowrap;
   flex-direction: column;
   position: relative;
-  height: 75%;
+  height: 70%;
 }
 .restaurants__results__card__image:hover {
   color: black;
 }
 .restaurants__results__card__image img {
   object-fit: cover;
-  width: 100%;
   height: 0;
   object-position: bottom;
-  flex: 1 0;
+  flex: 1 0 100%;
 }
 .restaurants__results__card__description {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px 20px 20px 10px;
+  padding: 15px 20px 20px 12px;
   flex: 0 0;
 }
 .restaurants__results__card__description__text {
@@ -304,16 +302,15 @@ ul {
   border: none;
   border-radius: 20px;
   background-color: #f6f6f6;
-  margin: 0 20px 22px 15px;
+  margin: 0 20px 22px 10px;
   align-items: center;
   cursor: pointer;
-  padding-right: 20px;
 }
 .howto-stepping__item::before {
-  transform: translate(-12px);
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
+  transform: translate(-18px);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
   text-align: center;
   border-radius: 50%;
   background-color: #9356DC;
@@ -325,7 +322,7 @@ ul {
   display: flex;
   align-items: center;
   width: 40px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .howto-stepping__item__1::before {
   content: "1";
@@ -363,7 +360,7 @@ header nav {
   position: fixed;
   z-index: 999;
   width: 100%;
-  height: 63px;
+  height: 65px;
   padding-top: 10px;
   background-color: white;
 }
@@ -393,7 +390,7 @@ header nav a img {
   text-align: center;
   width: 100%;
   position: static;
-  margin-top: 63px;
+  margin-top: 65px;
   padding-bottom: 57px;
 }
 .form-search {
@@ -426,8 +423,8 @@ header nav a img {
 
 .footer {
   background-color: #353535;
-  line-height: 30px;
-  padding: 20px;
+  line-height: 26px;
+  padding: 22px 25px 25px 25px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -435,7 +432,7 @@ header nav a img {
   position: relative;
 }
 .footer .footer-title {
-  margin-right: 10px;
+  margin: 0 10px 15px 0;
 }
 .footer-nav {
   margin: auto;
@@ -459,7 +456,7 @@ header nav a img {
 }
 
 .howto {
-  margin: 50px 0 45px 15px;
+  margin: 47px 0 43px 20px;
 }
 .howto-stepping {
   display: flex;
@@ -467,7 +464,7 @@ header nav a img {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 .howto-stepping__item {
   display: flex;
@@ -494,32 +491,33 @@ header nav a img {
   margin: auto;
   background-color: #f6f6f6;
   width: 100%;
-  padding: 53px 20px;
+  padding: 53px 20px 15px 20px;
 }
 .restaurants__results {
-  margin: 25px 0 50px 0;
+  margin: 22px 0 50px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: auto;
-  grid-gap: 15px;
+  grid-gap: 19px;
 }
 
 main {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  margin-top: 50px;
 }
 
 .picture {
   display: flex;
-  z-index: 1;
   width: 100%;
-  margin-bottom: -50px;
+  height: 300px;
+  margin-bottom: -65px;
+  margin-top: 50px;
 }
 .picture img {
-  width: 100%;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
   flex: 1 0;
 }
 
@@ -530,7 +528,7 @@ main {
   z-index: 2;
   background-color: #f6f6f6;
   border-radius: 50px 50px 0 0;
-  padding: 50px 20px;
+  padding: 30px 15px 0 15px;
   position: relative;
 }
 .menu__title {
@@ -539,37 +537,41 @@ main {
   flex-direction: row;
   align-items: center;
   font-family: "Shrikhand" !important;
+  font-size: 1.1em;
+  margin: 0 -5px 0 5px;
 }
 .menu__title h1 {
   margin-right: 20px;
 }
 .menu h2 {
   text-transform: uppercase;
-  margin-bottom: -5px;
+  margin: 28px 10px -5px 5px;
+  font-size: 1em;
 }
 .menu-underline {
-  width: 50px;
+  width: 40px;
   border: 2px solid #99E2D0;
-  margin: 10px 0;
+  margin: 10px 10px 15px 5px;
 }
 .menu-cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: -10px;
 }
 .menu-cards__item {
   display: flex;
   box-shadow: 2px 5px 12px 0px #cfcfcf;
-  height: 75px;
+  height: 68px;
   flex: 1 1 100%;
-  max-width: 450px;
   border: none;
   border-radius: 15px;
   background-color: white;
-  margin: 0 20px 22px 15px;
+  margin-bottom: 14px;
   cursor: pointer;
   overflow: hidden;
+  align-items: center;
 }
 .menu-cards__item__content {
   display: flex;
@@ -577,7 +579,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 20px;
+  padding: 20px 18px 20px 10px;
   align-items: end;
   overflow: hidden;
 }
@@ -610,7 +612,7 @@ main {
   text-align: center;
 }
 .menu-cards__item:hover .menu-cards__item--check {
-  flex-basis: 65px;
+  flex-basis: 55px;
 }
 
 /*# sourceMappingURL=style.css.map */

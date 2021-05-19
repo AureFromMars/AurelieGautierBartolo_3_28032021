@@ -1,24 +1,21 @@
-// nav>i {
-//     position: fixed;
-
-// }
-
-
 main {
     @include flexbox(flex, nowrap, column);
-    margin-top: 50px
 }
 
 .picture {
     @include flexbox(flex);
-    z-index: 1;
+    // z-index: 1;
     // position: fixed;
     width: 100%;
-    margin-bottom: -50px;
+    height: 300px;
+    margin-bottom: -65px;
+    margin-top: 50px;
+    // max-height: 250px;
 
     img {
-        width: 100%;
         object-fit: cover;
+        width: 100%;
+        height: 100%;
         flex: 1 0;
     }
 }
@@ -28,13 +25,15 @@ main {
     z-index: 2;
     background-color: $LIGHT_GREY;
     border-radius: 50px 50px 0 0;
-    padding: 50px 20px;
+    padding: 30px 15px 0 15px;
     position: relative;
 
     &__title {
         @include flexbox(flex, nowrap, row);
         align-items: center;
         font-family: $HEADINGS !important;
+        font-size: 1.1em;
+        margin: 0 -5px 0 5px;
 
         h1 {
             margin-right: 20px;
@@ -43,46 +42,54 @@ main {
 
     h2 {
         text-transform: uppercase;
-        margin-bottom: -5px;
+        margin: 28px 10px -5px 5px;
+        font-size: 1em;
     }
 
     &-underline {
-        width: 50px;
+        width: 40px;
         border: 2px solid $COLOR_TERTIARY;
-        margin: 10px 0;
+        margin: 10px 10px 15px 5px;
     }
 
     &-cards {
         @include flexbox (flex, wrap, row, center);
+        margin-bottom: -10px;
+
+        // @media (max-width: $MENU) {
+        //     @include flexbox(flex, wrap, column, center);//////////////// POURQUOI CENTER FONCTIONNE PAS ????
+        //     // align-items: center;
+        // }
         
         &__item {
             @include flexbox (flex);
             box-shadow: 2px 5px 12px 0px $HIGH_GREY;
-            height: 75px;
+            height: 68px;
             flex: 1 1 100%;
-            max-width: 450px;
+            // max-width: 550px;
             border: none;
             border-radius: 15px;
             background-color: white;
-            margin: 0 20px 22px 15px;
+            margin-bottom: 14px;
             cursor: pointer;
             overflow: hidden;
+            align-items: center;
 
             &__content {
                 @include flexbox (flex, nowrap, row, space-between);
-                // flex: 0 0 100%;
+                // flex: 0 0 100%;/////////////// POURQUOI PAS FLEX ????????????
                 width: 100%;
-                padding: 20px;
+                padding: 20px 18px 20px 10px;
                 align-items: end;
                 overflow: hidden;
 
                 &__text {
                     @include flexbox (flex, nowrap, column);
-                    // flex: 1 1 100%;
+                    // flex: 1 1 100%;/////////////// POURQUOI PAS FLEX ????????????
                     width: 100%;
 
                     >* {
-                        // flex: 1 1;
+                        // flex: 1 1;/////////////// POURQUOI PAS FLEX ????????????
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
@@ -108,7 +115,7 @@ main {
             }
 
             &:hover &--check {
-                flex-basis: 65px;
+                flex-basis: 55px;
             }
         }        
     }

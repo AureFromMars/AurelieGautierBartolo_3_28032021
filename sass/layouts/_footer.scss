@@ -1,12 +1,12 @@
 .footer {
     background-color: $DARK_GREY;
-    line-height: 30px;
-    padding: 20px;
+    line-height: 26px;
+    padding: 22px 25px 25px 25px;
     @include flexbox(flex, wrap, row, space-between);
     position: relative;
 
     .footer-title {
-        margin-right: 10px;
+        margin: 0 10px 15px 0;
     }
 
     &-nav {
