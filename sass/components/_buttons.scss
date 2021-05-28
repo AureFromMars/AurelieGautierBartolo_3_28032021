@@ -1,17 +1,9 @@
-// .light:hover {
-//     opacity: 0.6;
-// }
-
 .form-button {
 
-    a:hover {
-        color: white;
-    }
-
     .button {
-        box-shadow: 0 10px 10px $MEDIUM_GREY;
+        box-shadow: 0 10px 10px $HIGH_GREY;
         display: block;
-        width: 220px;
+        padding: 0 20px;
         border: none;
         border-radius: 100px;
         height: 50px;
@@ -22,8 +14,9 @@
         background-image: linear-gradient(to top left, $COLOR_PRIMARY, $COLOR_SECONDARY);
         transition: transform 300ms, background-image 1500ms 150ms;
 
-        &:hover {
-            // background-image: linear-gradient(to top left, $COLOR_SECONDARY, $COLOR_PRIMARY);
+        &:hover, &:focus {
+            opacity: 0.6;
+            box-shadow: 0 10px 10px $XHIGHT_GREY;
             transform: $SCALE;
         }
     }
@@ -31,18 +24,8 @@
 
 .restaurants__results, .menu__title {
 
-    #heart1, #heart2, #heart3, #heart4, #heartMenu {
-        display: none;
-
-        &:checked + label {
-            background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
-            -webkit-text-stroke-color: transparent;
-            will-change: font-size;
-            animation: pulse 0.5s ease-in;
-        }
-    }
-
     label[for=heart1], label[for=heart2], label[for=heart3], label[for=heart4], label[for=heartMenu] {
+
         cursor: pointer;
         position: relative;
         right: 0;
@@ -50,25 +33,40 @@
         padding: 5px;
         color: transparent;
         font-size: 1.4em;
-        transition: transform 300ms, background-image 300ms 150ms;
         -webkit-text-stroke: 1px;
         -webkit-text-stroke-color: black;
         -webkit-background-clip: text;
 
-        &:hover {
-            background-image: linear-gradient(to bottom, $COLOR_PRIMARY, $COLOR_SECONDARY);
-            animation: pulse 0.5s ease-in infinite;
-            -webkit-text-stroke-color: transparent;
+        &:hover, &:focus {
+            animation: pulse 0.7s ease-in infinite;
         }
 
-        &::selection {
-            color: none;
-            background: transparent;
+        &::selection {// PERMET D'APPLIQUER UN STYLE A UN ELEMENT SELECTIONNE
+
+        }
+    }
+
+    #heart1, #heart2, #heart3, #heart4, #heartMenu {
+        display: none;
+
+        &:checked + label {
+            background-image: linear-gradient(to bottom left, $COLOR_PRIMARY 25%, $COLOR_SECONDARY 65%, $COLOR_SECONDARY 90%);
+            -webkit-text-stroke-color: transparent;
+            animation: fadeIn 0.5s ease-in;
         }
     }
 }
 
 @keyframes pulse {
-    25% {transform: scale(0.9);}
-    75% {transform: scale(1.1);}
+    25% { transform: scale(0.9); }
+    75% { transform: scale(1.1); }
+}
+
+@keyframes fadeIn {
+    0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

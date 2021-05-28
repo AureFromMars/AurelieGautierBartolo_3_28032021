@@ -24,13 +24,13 @@
 
             &::placeholder {
                 opacity: 1;
-                font-size: 1.3em;
+                font-size: 1.1em;
+                font-weight: bold;
             }
         }
     }
 
     &-text {
-        letter-spacing: -0.4px;
 
         h1 {
             line-height: 27px;
@@ -38,6 +38,7 @@
         }
 
         p {
+            line-height: 22px;
             margin-bottom: 30px;
         }
     }

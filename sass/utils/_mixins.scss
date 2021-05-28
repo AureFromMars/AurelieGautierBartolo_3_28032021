@@ -26,21 +26,3 @@
 		justify-content: $JUSTIFY;
 	}
 }
-
-@mixin desktop{
-	@media screen and (max-width: #{$DESKTOP}) {
-		@content;
-	}
-}
-
-@mixin tablet{
-	@media screen and (max-width: #{$TABLET}) {
-		@content;
-	}
-}
-
-@mixin phone{
-	@media screen and (max-width: #{$PHONE}) {
-		@content;
-	}
-}

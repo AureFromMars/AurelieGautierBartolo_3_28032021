@@ -6,7 +6,7 @@
         <meta name="description" content="Bienvenue sur le site Internet d'ohmyfood !">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link rel="icon" href="favicon.ico">
         <script src="https://kit.fontawesome.com/05ffc8aabd.js" crossorigin="anonymous"></script>
         <title>ohmyfood</title>
@@ -41,7 +41,7 @@
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                     </div>
                     <div class="form-button">
-                        <button class="button" title="Explorez nos restaurants">Explorez nos restaurants</button>
+                        <button class="button" title="Explorez nos restaurants">Explorer nos restaurants</button>
                     </div>
                 </form>
             </header>
@@ -50,11 +50,11 @@
                 <section class="howto">
                     <h2>Fonctionnement</h2>
                     <ul class="howto-stepping">
-                        <li class="howto-stepping__item howto-stepping__item__1">
+                        <li href="#restaurants" class="howto-stepping__item howto-stepping__item__1">
                             <div class="howto-stepping__item__svgContainer">
                                 <svg preserveAspectRatio="none" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile-alt" class="svg-inline--fa fa-mobile-alt fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg>
                             </div>
-                            <p>Choisissez votre restaurant</p>
+                            <p>Choisissez un restaurant</p>
                         </li>
                         <li class="howto-stepping__item howto-stepping__item__2">
                             <div class="howto-stepping__item__svgContainer">
@@ -70,7 +70,7 @@
                         </li>
                     </ul>
                 </section>
-                <article class="restaurants">
+                <article class="restaurants" id="restaurants">
                     <h2>Restaurants</h2>
                     <ul class="restaurants__results">
                         <li class="restaurants__results__card">
@@ -84,7 +84,7 @@
                                 </a>
                                 <input id="heart1" type="checkbox" />
                                 <label for="heart1">
-                                    <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                                    <i class="fas fa-heart"></i>
                                 </label>
                             </div>
                         </li>
@@ -99,7 +99,7 @@
                                 </a>
                                 <input id="heart2" type="checkbox" />
                                 <label for="heart2">
-                                    <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                                    <i class="fas fa-heart"></i>
                                 </label>
                             </div>
                         </li>
@@ -114,7 +114,7 @@
                                 </a>
                                 <input id="heart3" type="checkbox" />
                                 <label for="heart3">
-                                    <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                                    <i class="fas fa-heart"></i>
                                 </label>
                             </div>
                         </li>
@@ -129,7 +129,7 @@
                                 </a>
                                 <input id="heart4" type="checkbox" />
                                 <label for="heart4">
-                                    <i class="fas fa-heart restaurants__results__card__description__heart"></i>
+                                    <i class="fas fa-heart"></i>
                                 </label>
                             </div>
                         </li>
@@ -140,11 +140,11 @@
             <footer class="footer">
                 <h2 class="footer-title">ohmyfood</h2>
                 <nav class="footer-nav">
-                    <ul class="footer-nav__list flex wrap row">
+                    <ul class="footer-nav__list">
                         <li class="footer-nav__list__item"><a href="" title="Restaurateurs, proposez-nous votre restaurant"><i class="fas fa-utensils"></i><b>Proposer un restaurant</b></a></li>
                         <li class="footer-nav__list__item"><a href="" title="Devenez partenaire ohmyfood"><i class="fas fa-hands-helping"></i><b>Devenir partenaire</b></a></li>
                         <li class="footer-nav__list__item"><a href="" title="Consultez les mentions légales">Mentions légales</a></li>
-                        <li class="footer-nav__list__item"><a href="" title="Toutes nos coordonnées de contact">Contact</a></li>
+                        <li class="footer-nav__list__item"><a href="mailto:aurelie.gautierbartolo@gmail.com" title="Contactez-nous par email">Contact</a></li>
                     </ul>
                 </nav>
             </footer>

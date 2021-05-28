@@ -15,15 +15,17 @@ header {
             align-items: center;
 
             i {
-                font-size: x-large;
-                margin-left: 20px;
+                position: absolute;
+                font-size: large;
+                margin-left: 23px;
+                margin-top: -5px;
             }
 
             img {
                 flex: 1 1 100%;
                 display: block;
                 height: 53%;
-                margin-left: -20px;
+                // margin-left: -20px;
             }
         }
     }

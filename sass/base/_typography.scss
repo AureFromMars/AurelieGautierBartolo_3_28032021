@@ -9,7 +9,7 @@ body {
         color: inherit;
     }
 
-    & a:hover {
+    & a:hover, &:focus {
         color: $COLOR_PRIMARY;
     }
 
@@ -24,7 +24,8 @@ p, h1, h2, h3, h4, ul {
 }
 
 p {
-    font-size: 1.15em;
+    font-size: 1.17em;
+    font-weight: lighter;
 }
 
 h1 {
@@ -32,6 +33,10 @@ h1 {
 }
 
 h2 {
+    // letter-spacing: -0.5px;
+}
+
+h1, h2, h3, p {
     letter-spacing: -0.5px;
 }
 
