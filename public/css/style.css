@@ -145,7 +145,6 @@ ul {
 }
 /* LOADER */
 .loader {
-  display: none;
   position: fixed;
   height: 0%;
   width: 100%;
