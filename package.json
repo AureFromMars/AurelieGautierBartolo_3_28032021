@@ -4,7 +4,7 @@
   "description": "OC P3 Dynamisez une page web avec des animations CSS",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
   },
   "_commentaire": "commentaire compatible tous analyseurs : différents styles de compilation sass : nested expanded compact compressed",
   "repository": {
