@@ -2,13 +2,12 @@
 # Dynamiser une page web avec des animations CSS
 
 
-## Projet n°3
-## de la formation en alternance
-## d'Aurélie GAUTIER BARTOLO
+## Projet n°3  
+de la formation en alternance  
+d'Aurélie GAUTIER BARTOLO
 
-### Parcours Développeur Web
-
-### 2020/2021
+### Parcours Développeur Web  
+2020/2021
 
 
 #### Durée du projet : 70 heures
