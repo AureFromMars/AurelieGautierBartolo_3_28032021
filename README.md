@@ -1,8 +1,19 @@
-OC P3 Dynamisez une page web avec des animations CSS
+Site Internet Ohmyfood
+Dynamiser une page web avec des animations CSS
+==
 
-Pour changer le style de compression du style.css
+# Projet n°3
+# de la formation en alternance
+# d'Aurélie GAUTIER BARTOLO
 
-Pour télécharger sass sur votre ordinateur, tapez la ligne de commande : npm install
+Parcours Développeur Web
+-
+2020/2021
+-
 
-Pour créer un attribut spécifique hors class : data-XXX=""
-https://medium.com/@OxyDesign/the-benefits-of-css-html-components-with-attribute-selectors-namespacing-nesting-b884468525d2
+Durée du projet : 70 heures
+Soutenance : 31/05/2021 à 13h
+Evaluateur : Tiao-Saysanavong Bounkhong
+
+URL du repository GitHub : https://github.com/AureFromMars/AurelieGautierBartolo_3_28032021
+URL de la page d'accueil : https://aurefrommars.github.io/AurelieGautierBartolo_3_28032021/public/index.html 
